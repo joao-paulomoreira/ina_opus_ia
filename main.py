@@ -14,7 +14,7 @@ PASTA_MENSAGEM.mkdir(exist_ok=True)
 CACHE_DESCONVERTE = {}
 
 load_dotenv()
-api_key = st.secrets["OPENAI_API_KEY"]
+openai_key = st.secrets["OPENAI_API_KEY"]
 
 
 def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o', temperatura=0, stream=False, max_tokens=500):
