@@ -23,7 +23,7 @@ def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4', temperatura=0
     openai.api_key = openai_key
     
     if stream:
-        # Chamando o método de ChatCompletion corretamente para streaming
+        # Usando o método de ChatCompletion com stream ativado
         response_stream = openai.ChatCompletion.create(  
             model=modelo,
             messages=mensagens,
@@ -31,23 +31,21 @@ def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4', temperatura=0
             max_tokens=max_tokens,
             stream=True
         )
-        # Construir a resposta agregando os fragmentos do stream
+        # Concatenando o conteúdo dos chunks de resposta
         resposta_completa = ''
         for chunk in response_stream:
-            # Verificar se o chunk possui 'choices' e 'delta' antes de tentar acessar o 'content'
-            if 'choices' in chunk and len(chunk['choices']) > 0:
+            if isinstance(chunk, dict) and 'choices' in chunk and len(chunk['choices']) > 0:
                 delta = chunk['choices'][0].get('delta', {})
-                resposta_completa += delta.get('content', '')  # Concatenar o conteúdo dos chunks
+                resposta_completa += delta.get('content', '')  # Adiciona o conteúdo do delta
         return resposta_completa
     else:
-        # Sem stream, a resposta vem diretamente como um objeto completo
+        # Quando stream não é utilizado, a resposta é retornada de forma tradicional
         response = openai.ChatCompletion.create(
             model=modelo,
             messages=mensagens,
             temperature=temperatura,
             max_tokens=max_tokens
         )
-        # Retorna o conteúdo da resposta
         return response['choices'][0]['message']['content']
 
 
