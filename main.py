@@ -153,6 +153,7 @@ def exibe_mensagem_usuario(conteudo):
     st.markdown(f"**Você:** {conteudo}")
 
 def pagina_principal():
+def pagina_principal():
     if 'mensagens' not in st.session_state:
         st.session_state['mensagens'] = []
 
@@ -232,18 +233,17 @@ Gestão de Estoque e Acurácidade em Farmácia Hospitalar - Claudia Caduro
 Aplicação dos Principios ESG em Farmácias Hospitalares - Carlos Vageler
         '''})
 
-        resposta_completa = ''
-        respostas = retorna_resposta_modelo(mensagens_para_modelo, openai_key, stream=True, max_tokens=300)
+        resposta_completa = retorna_resposta_modelo(mensagens_para_modelo, openai_key, stream=True, max_tokens=300)
 
-        for resposta in respostas:
-            resposta_completa += resposta.choices[0].delta.get('content', '')
-
+        # Se o stream for utilizado, a resposta já é concatenada corretamente em resposta_completa
         exibe_mensagem_assistente(resposta_completa)
+
         nova_mensagem = {'role': 'assistant', 'content': resposta_completa}
         mensagens.append(nova_mensagem)
 
         st.session_state['mensagens'] = mensagens
         salvar_mensagens(mensagens)
+
 
 def tab_conversas(tab):
     tab.button('Nova conversa', on_click=seleciona_conversa, args=('', ), use_container_width=True)
