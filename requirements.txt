@@ -1,0 +1,11 @@
+ipykernel
+openai>=1.0.0
+python-dotenv
+yfinance
+pandas
+matplotlib
+langdetect
+unidecode
+streamlit
+pymupdf
+python-dotenv
