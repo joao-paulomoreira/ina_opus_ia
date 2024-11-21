@@ -17,11 +17,14 @@ load_dotenv()
 openai_key = st.secrets["OPENAI_API_KEY"]
 
 
+import openai
+
 def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4', temperatura=0, stream=True, max_tokens=500):
     openai.api_key = openai_key
     
     if stream:
-        response_stream = openai.ChatCompletion.create(  # Método correto
+        # Chamando o método de ChatCompletion corretamente para streaming
+        response_stream = openai.ChatCompletion.create(  
             model=modelo,
             messages=mensagens,
             temperature=temperatura,
@@ -31,18 +34,22 @@ def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4', temperatura=0
         # Construir a resposta agregando os fragmentos do stream
         resposta_completa = ''
         for chunk in response_stream:
+            # Verificar se o chunk possui 'choices' e 'delta' antes de tentar acessar o 'content'
             if 'choices' in chunk and len(chunk['choices']) > 0:
                 delta = chunk['choices'][0].get('delta', {})
-                resposta_completa += delta.get('content', '')
+                resposta_completa += delta.get('content', '')  # Concatenar o conteúdo dos chunks
         return resposta_completa
     else:
-        response = openai.ChatCompletion.create(  # Método correto
+        # Sem stream, a resposta vem diretamente como um objeto completo
+        response = openai.ChatCompletion.create(
             model=modelo,
             messages=mensagens,
             temperature=temperatura,
             max_tokens=max_tokens
         )
+        # Retorna o conteúdo da resposta
         return response['choices'][0]['message']['content']
+
 
 def converte_nome_mensagem(nome_mensagem):
     nome_arquivo = unidecode(nome_mensagem) 
