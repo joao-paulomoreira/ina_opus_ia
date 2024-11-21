@@ -1,5 +1,5 @@
 ipykernel
-openai>=1.0.0
+openai
 python-dotenv
 yfinance
 pandas
