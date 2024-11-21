@@ -21,7 +21,7 @@ def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4', temperatura=0
     openai.api_key = openai_key
     
     if stream:
-        response_stream = openai.chat_completions.create(  # Alteração aqui para 'chat_completions.create'
+        response_stream = openai.ChatCompletion.create(  # Método correto
             model=modelo,
             messages=mensagens,
             temperature=temperatura,
@@ -36,7 +36,7 @@ def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4', temperatura=0
                 resposta_completa += delta.get('content', '')
         return resposta_completa
     else:
-        response = openai.chat_completions.create(  # Alteração aqui também para 'chat_completions.create'
+        response = openai.ChatCompletion.create(  # Método correto
             model=modelo,
             messages=mensagens,
             temperature=temperatura,
