@@ -153,7 +153,6 @@ def exibe_mensagem_usuario(conteudo):
     st.markdown(f"**Você:** {conteudo}")
 
 def pagina_principal():
-def pagina_principal():
     if 'mensagens' not in st.session_state:
         st.session_state['mensagens'] = []
 
