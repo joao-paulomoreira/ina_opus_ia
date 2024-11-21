@@ -17,18 +17,17 @@ load_dotenv()
 openai_key = st.secrets["OPENAI_API_KEY"]
 
 
-def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o', temperatura=0, stream=False, max_tokens=500):
+def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4', temperatura=0, stream=False, max_tokens=500):
     openai.api_key = openai_key
     
     response = openai.ChatCompletion.create(
         model=modelo,
         messages=mensagens,
         temperature=temperatura,
-        max_tokens=max_tokens,
-        stream=stream
+        max_tokens=max_tokens
     )
-    
-    return response
+
+    return response['choices'][0]['message']['content']
 
 def converte_nome_mensagem(nome_mensagem):
     nome_arquivo = unidecode(nome_mensagem) 
