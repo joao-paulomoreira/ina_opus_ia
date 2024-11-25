@@ -241,7 +241,7 @@ Aplicação dos Principios ESG em Farmácias Hospitalares - Carlos Vageler
         mensagens.append(nova_mensagem)
 
         st.session_state['mensagens'] = mensagens
-        salvar_mensagens(mensagens)
+        ##salvar_mensagens(mensagens)
 
 
 def tab_conversas(tab):
