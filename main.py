@@ -68,14 +68,14 @@ def retorna_nome_da_mensagem(mensagens):
             break
     return nome_mensagem
 
-def salvar_mensagens(mensagens):
-    if len(mensagens) == 0:
-        return False
-    nome_mensagem = retorna_nome_da_mensagem(mensagens)
-    nome_arquivo = converte_nome_mensagem(nome_mensagem)
-    arquivo_salvar = {'nome_mensagem': nome_mensagem, 'nome_arquivo': nome_arquivo, 'mensagem': mensagens}
-    with open(PASTA_MENSAGEM / nome_arquivo, 'wb') as f:
-        pickle.dump(arquivo_salvar, f)
+##def salvar_mensagens(mensagens):
+  ##  if len(mensagens) == 0:
+    ##    return False
+  ##  nome_mensagem = retorna_nome_da_mensagem(mensagens)
+  ##  nome_arquivo = converte_nome_mensagem(nome_mensagem)
+  ##  arquivo_salvar = {'nome_mensagem': nome_mensagem, 'nome_arquivo': nome_arquivo, 'mensagem': mensagens}
+  ##  with open(PASTA_MENSAGEM / nome_arquivo, 'wb') as f:
+  ##      pickle.dump(arquivo_salvar, f)
 
 def ler_mensagem_por_nome_arquivo(nome_arquivo, key='mensagens'):
     with open(PASTA_MENSAGEM / nome_arquivo, 'rb') as f:
