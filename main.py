@@ -137,9 +137,9 @@ def buscar_resposta(textos, pergunta):
 
 def inicializacao():
     if not 'mensagens' in st.session_state:
-        st.session_state.mensagens = []
+        st.session_state['mensagens'] = []
     if not 'conversa_atual' in st.session_state:
-        st.session_state.conversa_atual = ''
+        st.session_state['conversa_atual'] = ''
         
 def exibe_mensagem_assistente(conteudo):
     col1, col2 = st.columns([1, 9])
@@ -243,29 +243,31 @@ Aplicação dos Principios ESG em Farmácias Hospitalares - Carlos Vageler
         ##salvar_mensagens(mensagens)
 
 
-def tab_conversas(tab):
-    tab.button('Nova conversa', on_click=seleciona_conversa, args=('', ), use_container_width=True)
-    tab.markdown('')
-    conversas = listar_conversas()
-    for nome_arquivo in conversas:
-        nome_mensagem = desconverte_nome_mensagem(nome_arquivo).capitalize()
-        if len(nome_mensagem) == 30:
-            nome_mensagem += '...'
-        tab.button(desconverte_nome_mensagem(nome_arquivo).capitalize(), on_click=seleciona_conversa, args=(nome_arquivo, ), disabled=nome_arquivo==st.session_state['conversa_atual'], use_container_width=True)
-    
-def seleciona_conversa(nome_arquivo):
-    if nome_arquivo == '':
-        st.session_state.mensagens = []
-    else:
-        mensagem = ler_mensagem_por_nome_arquivo(nome_arquivo, key='mensagem')
-        st.session_state.mensagens = mensagem
-    st.session_state['conversa_atual'] = nome_arquivo
+# A parte das abas foi removida
+# def tab_conversas(tab):
+#     tab.button('Nova conversa', on_click=seleciona_conversa, args=('', ), use_container_width=True)
+#     tab.markdown('')
+#     conversas = listar_conversas()
+#     for nome_arquivo in conversas:
+#         nome_mensagem = desconverte_nome_mensagem(nome_arquivo).capitalize()
+#         if len(nome_mensagem) == 30:
+#             nome_mensagem += '...'
+#         tab.button(desconverte_nome_mensagem(nome_arquivo).capitalize(), on_click=seleciona_conversa, args=(nome_arquivo, ), disabled=nome_arquivo==st.session_state['conversa_atual'], use_container_width=True)
+
+# def seleciona_conversa(nome_arquivo):
+#     if nome_arquivo == '':
+#         st.session_state.mensagens = []
+#     else:
+#         mensagem = ler_mensagem_por_nome_arquivo(nome_arquivo, key='mensagem')
+#         st.session_state.mensagens = mensagem
+#     st.session_state['conversa_atual'] = nome_arquivo
 
 def main():
     inicializacao()
     pagina_principal()
-    tab1, tab2 = st.sidebar.tabs(['Conversas', 'Configurações'])
-    tab_conversas(tab1)
+    # Removido a parte das abas
+    # tab1, tab2 = st.sidebar.tabs(['Conversas', 'Configurações'])
+    # tab_conversas(tab1)
 
 if __name__ == '__main__':
     main()
