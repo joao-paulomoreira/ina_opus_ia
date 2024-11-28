@@ -151,7 +151,7 @@ def exibe_mensagem_assistente(conteudo):
 def exibe_mensagem_usuario(conteudo):
     col1, col2 = st.columns([1, 9])
     with col1:
-        st.image('ina.png', width=40)
+        st.image('icon_person_no_bg.png', width=40)
     with col2:
         st.markdown(f"**Você:** {conteudo}")
 
