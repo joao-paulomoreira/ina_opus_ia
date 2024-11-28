@@ -149,6 +149,7 @@ def exibe_mensagem_assistente(conteudo):
         st.markdown(conteudo)
 
 def exibe_mensagem_usuario(conteudo):
+    st.image('ina.png', width=40)
     st.markdown(f"**Você:** {conteudo}")
 
 def pagina_principal():
