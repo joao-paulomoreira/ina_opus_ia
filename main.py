@@ -16,7 +16,6 @@ CACHE_DESCONVERTE = {}
 load_dotenv()
 openai_key = st.secrets["OPENAI_API_KEY"]
 
-
 import openai
 
 def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-18', temperatura=0, stream=True, max_tokens=500):
