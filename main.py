@@ -160,7 +160,7 @@ def pagina_principal():
         st.session_state['mensagens'] = []
 
     mensagens = st.session_state['mensagens']
-    textos_pdf = carregar_pdfs('\documents')
+    textos_pdf = carregar_pdfs('documents')
 
     st.header(' Ina', divider=True)
 
