@@ -51,7 +51,13 @@ def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-1
                 resposta_completa += delta.get('content', '')
                 
         elapsed_time = time.time() - start_time
-        logging.info(f"Resposta processada com sucesso em {elapsed_time:.2f}")                 
+        processing_rate = f'Resposta processada com sucesso em {elapsed_time:.2f} segundos'
+        
+        with open("processing_rate.txt", "a") as txt_file:
+            txt_file.write(processing_rate, "\n")
+            
+        logging.info(processing_rate)
+                     
         return resposta_completa
     else:
         response = openai.ChatCompletion.create(
