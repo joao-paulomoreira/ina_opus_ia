@@ -54,7 +54,7 @@ def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-1
         processing_rate = f'Resposta processada com sucesso em {elapsed_time:.2f} segundos'
         
         with open("processing_rate.txt", "a") as txt_file:
-            txt_file.write(processing_rate, "\n")
+            txt_file.write(processing_rate + "\n")
             
         logging.info(processing_rate)
                      
