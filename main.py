@@ -6,6 +6,9 @@ import streamlit as st
 import openai
 import os
 import fitz
+import logging
+import time
+import openai
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
 
@@ -16,7 +19,14 @@ CACHE_DESCONVERTE = {}
 load_dotenv()
 openai_key = st.secrets["OPENAI_API_KEY"]
 
-import openai
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("app_log.log"),
+        logging.StreamHandler()
+    ]
+)
 
 def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-18', temperatura=0, stream=True, max_tokens=500):
     openai.api_key = openai_key
