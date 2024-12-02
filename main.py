@@ -31,6 +31,9 @@ logging.basicConfig(
 def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-18', temperatura=0, stream=True, max_tokens=500):
     openai.api_key = openai_key
     
+    start_time = time.time()
+    logging.info(f"Processando mensagens com {len(mensagens)} entradas")
+    
     if stream:
 
         response_stream = openai.ChatCompletion.create(  
@@ -45,7 +48,10 @@ def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-1
         for chunk in response_stream:
             if isinstance(chunk, dict) and 'choices' in chunk and len(chunk['choices']) > 0:
                 delta = chunk['choices'][0].get('delta', {})
-                resposta_completa += delta.get('content', '') 
+                resposta_completa += delta.get('content', '')
+                
+        elapsed_time = time.time() - start_time
+        logging.info(f"Resposta processada com sucesso em {elapsed_time:.2f}")                 
         return resposta_completa
     else:
         response = openai.ChatCompletion.create(
