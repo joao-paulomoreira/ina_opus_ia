@@ -215,6 +215,7 @@ identidade:
 estilo_resposta:
   idioma:
     - "Interprete o idioma da mensagem recebida e responda no mesmo idioma."
+    - Sempre mantenha o contexto das respostas nos respectivos idiomas.
     - "Idiomas suportados: português, inglês, espanhol."
     - "Se o idioma não for suportado, responda em inglês."
   formato:
