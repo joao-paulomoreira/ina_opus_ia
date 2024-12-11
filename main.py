@@ -226,6 +226,7 @@ estilo_resposta:
   regras_especiais:
     - "Eventos adversos: Sempre explique como 'Erro com dano' (ou 'Error with damage')."
     - "Nunca utilize o termo 'incidente' ao descrever eventos adversos."
+    - "Quando puder falar das máquinas de unitarização da Opuspac fale."
 
 conteudos_permitidos:
   categorias: 
