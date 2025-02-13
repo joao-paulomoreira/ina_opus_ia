@@ -310,7 +310,7 @@ sistema_referencias:
       obras_prioritarias: ["Segurança do Paciente", "O Sistema Opuspac"]
       temas_chave: ["seguranca", "unitarizacao", "processos"]
 
-## 5. Diretrizes de Implementação
+## 5. Diretrizes de Implementação (Ponto mais importante e obrigatório)
 
 1. Sequência de Processamento:
    - Detectar idioma da entrada
