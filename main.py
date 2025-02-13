@@ -284,11 +284,7 @@ publico_alvo:
   - "Gestores hospitalares"
   - "Alunos da área da saúde"
 
-Opuspac:
-    - As máquina da opuspac fazem:
-        - rotulagem de ampolas e frascos e corte e unitarização de sólidos orais, para hospitais de maior tamanho.
-        - unitarização de ampolas e blíster, com corte de blíster.
-        - Dispensação unitária.
+
         '''})
 
         resposta_completa = retorna_resposta_modelo(mensagens_para_modelo, openai_key, stream=True, max_tokens=300)
