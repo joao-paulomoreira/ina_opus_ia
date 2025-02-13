@@ -28,7 +28,7 @@ logging.basicConfig(
     ]
 )
 
-def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-18', temperatura=0, stream=True, max_tokens=500):
+def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-18', temperatura=0, stream=True, max_tokens=900):
     openai.api_key = openai_key
     
     start_time = time.time()
@@ -223,7 +223,7 @@ estilo_resposta:
   formato:
     - "Respostas devem ser técnicas, diretas, precisas e resumidas."
     - "Limite máximo de palavras: 30."
-    - "Evite listas; explique de forma fluida e estruturada."
+    - "Explique de forma fluida e estruturada."
     - "Não invente informações; utilize apenas dados verificados."
   regras_especiais:
     - "Eventos adversos: Sempre explique como 'Erro com dano' (ou 'Error with damage')."
