@@ -35,7 +35,6 @@ def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-1
     logging.info(f"Processando mensagens com {len(mensagens)} entradas")
     
     if stream:
-
         response_stream = openai.ChatCompletion.create(  
             model=modelo,
             messages=mensagens,
@@ -68,7 +67,6 @@ def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-1
         )
         return response['choices'][0]['message']['content']
 
-
 def converte_nome_mensagem(nome_mensagem):
     nome_arquivo = unidecode(nome_mensagem) 
     nome_arquivo = re.sub('\W+', '', nome_arquivo).lower()
@@ -87,15 +85,6 @@ def retorna_nome_da_mensagem(mensagens):
             nome_mensagem = mensagem['content'][:30]
             break
     return nome_mensagem
-
-##def salvar_mensagens(mensagens):
-  ##  if len(mensagens) == 0:
-    ##    return False
-  ##  nome_mensagem = retorna_nome_da_mensagem(mensagens)
-  ##  nome_arquivo = converte_nome_mensagem(nome_mensagem)
-  ##  arquivo_salvar = {'nome_mensagem': nome_mensagem, 'nome_arquivo': nome_arquivo, 'mensagem': mensagens}
-  ##  with open(PASTA_MENSAGEM / nome_arquivo, 'wb') as f:
-  ##      pickle.dump(arquivo_salvar, f)
 
 def ler_mensagem_por_nome_arquivo(nome_arquivo, key='mensagens'):
     with open(PASTA_MENSAGEM / nome_arquivo, 'rb') as f:
@@ -283,47 +272,20 @@ publico_alvo:
   - "Técnicos em farmácia"
   - "Gestores hospitalares"
   - "Alunos da área da saúde"
-
-
         '''})
 
         resposta_completa = retorna_resposta_modelo(mensagens_para_modelo, openai_key, stream=True, max_tokens=300)
 
-        # Se o stream for utilizado, a resposta já é concatenada corretamente em resposta_completa
         exibe_mensagem_assistente(resposta_completa)
 
         nova_mensagem = {'role': 'assistant', 'content': resposta_completa}
         mensagens.append(nova_mensagem)
 
         st.session_state['mensagens'] = mensagens
-        ##salvar_mensagens(mensagens)
-
-
-# A parte das abas foi removida
-# def tab_conversas(tab):
-#     tab.button('Nova conversa', on_click=seleciona_conversa, args=('', ), use_container_width=True)
-#     tab.markdown('')
-#     conversas = listar_conversas()
-#     for nome_arquivo in conversas:
-#         nome_mensagem = desconverte_nome_mensagem(nome_arquivo).capitalize()
-#         if len(nome_mensagem) == 30:
-#             nome_mensagem += '...'
-#         tab.button(desconverte_nome_mensagem(nome_arquivo).capitalize(), on_click=seleciona_conversa, args=(nome_arquivo, ), disabled=nome_arquivo==st.session_state['conversa_atual'], use_container_width=True)
-
-# def seleciona_conversa(nome_arquivo):
-#     if nome_arquivo == '':
-#         st.session_state.mensagens = []
-#     else:
-#         mensagem = ler_mensagem_por_nome_arquivo(nome_arquivo, key='mensagem')
-#         st.session_state.mensagens = mensagem
-#     st.session_state['conversa_atual'] = nome_arquivo
 
 def main():
     inicializacao()
     pagina_principal()
-    # Removido a parte das abas
-    # tab1, tab2 = st.sidebar.tabs(['Conversas', 'Configurações'])
-    # tab_conversas(tab1)
 
 if __name__ == '__main__':
     main()
