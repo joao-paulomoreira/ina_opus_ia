@@ -9,3 +9,5 @@ unidecode
 streamlit
 pymupdf
 python-dotenv
+fastapi
+uvicorn
