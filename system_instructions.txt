@@ -12,12 +12,14 @@ Lista de Máquinas
    - OPUS FLAG
    - OPUS NINA
    - PIK ONE
+   - OPUS PICK
    - OPUS INK
    - OPUS 30G
    
 Lista de softwares
    - Opus 5.0 Plus
    - EasyCut
+   - SMART PICK
    - Vi Blue
    
 -- AIVAK PRO (Conhecida por AIVAK também) --
@@ -451,6 +453,67 @@ Lista de softwares
    Interface do usuários com filtros para visualização de dados;
    Lista e armazenamento de Logs.
 
+
+-- OPUS PICK --
+   OPUS PICK: O equipamento OPUSPICK foi projetado para uso
+   específico de dispensa de produtos médicos, o
+   equipamento armazena os mais diversos tipos de
+   produtos e através do Software SmartPick que permite
+   uma conexão ao ERP do cliente gerando um melhor
+   controle dos medicamentos.
+   Possibilidade de configuração do planograma de acordo
+   com a demanda de SKUs do cliente podendo utilizar a
+   opção do equipamento BASE o qual poderá ser
+   agregado a módulos AUXILIARES.
+   A OPUSPAC não se responsabiliza por qualquer outro
+   tipo de uso que não esteja nesta descrição, danificando
+   o equipamento ou utilização de materiais não originais
+   OPUSPAC, podendo gerar a perda de garantia do
+   equipamento.
+
+   Especificações
+      Dimensões (L x C x A): 0,60 x 0,68 x 1,75 m (0,71 m3)
+      Dimensões totais do equipamento
+      Peso módulo Base: 250 kg (576 kg/m2)
+      O peso informado é composto pelo peso do equipamento com os discos, caixas de saída e sem a bobina de embalagem.
+      Peso módulo Auxiliar: 235 kg
+      Alimentação: 220 Volts
+      Utilização do conector padrão com aterramento para 10 amperes
+      Permitido a utilização de estabilizador externo devidamente especificado
+      Potência: 2200 Watts
+
+   Características
+      Capacidade de até 800 SKUs, 30.000 unidades, dependendo da configuração
+      As gavetas abrem apenas quando o sistema requer e então o código de barras do medicamento é validado.
+      O Opuspick é composto por um módulo base, principal, e auxiliares, com 02, 04 ou 06 módulos
+      O equipamento pode ser configurado de acordo com os requisitos do cliente em
+      quantidade de módulos, quantidade e dimensões das gavetas
+      Cada compartimento pode ser configurado para as seguintes embalagens
+         ● 60x60 / 70x65 – Indicado para Blisters;
+         ● 60x100 / 70x95 / 70x130 – Indicado para Ampolas;
+         ● Ampolas Flag até Ø 25mm com altura máxima de 120mm.
+         ● Ampolas ou frascos até Ø 40mm com altura máxima de 120mm.
+      Possui um mecanismo para separação, onde o operador se movimenta lateralmente
+      para alcançar as gavetas com os medicamentos e em seu módulo central, temos a embalagem preparada para receber os medicamentos contidos na prescrição do paciente e selagem da mesma finalizando o processo de separação;
+      Equipamento sobre rodízios para facilitar a movimentação
+      Sistema mecânico de abertura das gavetas para contingência por alavanca nos módulos auxiliares.
+      Emprega até 8 módulos auxiliares, sendo 4 para cada lado;
+      Cada módulo pode comportar até 10 linhas de gavetas;
+      Cada gaveta comporta 1 SKU de medicamento, podendo conter 1 divisória para utilização do sistema FIFO;
+      IHM colorida de 15′′ com touch screen capacitivo - Para realizar comandos e visualizar a informações
+      Scanner de leitura de código de barras 1D / 2D - para identificação do medicamento
+      no qual realiza leitura destes tipos de códigos
+         ● 2D: PDF417, QR Code, Data Matrix, AZTEC, CSC, Maxicode, Micro QR, Micro PDF417, GM , Code One;
+         ● 1D: Code128, EAN-13, EAN-8, Code39, UPC-A, UPC-E, Codabar,
+      Interleaved 2 of 5, ISBN, Code 93, GS1 Databar;
+      Até 80 gavetas pequenas (comprimidos) Até 30 gavetas médias (ampolas)
+      Leitor biométrico – Utilizado para a identificação do usuário;
+      Recomendamos que a instalação do equipamento seja em ambiente com ar
+      condicionado e operando no range de temperatura de 20°C a 24°C
+
+   Essa máquina funciona com o software SMART PICK
+
+
 -- OPUS INK --
 
    OPUS INK: O equipamento OPUS INK tem como principal função
@@ -668,6 +731,33 @@ Informações dos Softwares
                - Aplica a melhoria contínua e a melhor organização física nos processos.
             16. Mais Clareza na Gestão com Dashboards
                - Fornece mais clareza na gestão através de informações sintetizadas nos dashboards.
+
+
+      Software SMART PICK
+
+         A integração com o Software SmartPick
+         Equipamento comandado pelo nosso software SmartPick, desenvolvido para atender aos requerimentos
+         mais específicos do mercado, no qual faz a gestão de processos nos dispensários recebendo e enviando
+         informações via API
+         Interface de fácil operação com as seguintes funcionalidades:
+            ● Relatório de consumo por paciente;
+            ● Relatório para reabastecimento;
+            ● Controle de usuário através de biometria;
+            ● Controle de estoques mínimos e máximos de medicamentos;
+            ● Inventário de produtos;
+            ● Cadastro de perfil com níveis de acesso;
+            ● Cadastramento de Kits e produtos;
+            ● Classificação por categoria;
+            ● Controle de validade;
+            ● Controle de horário;
+            ● Controle de descartes de produtos com relatórios de dados;
+            ● Cadastro de categorias;
+            ● Indicação de alertas e avisos por medicamento;
+            ● Função de descarte e devolução com justificativas selecionáveis;
+            ● Associação de leitos x usuários;
+            ● Interface do usuários com filtros para visualização de dados;
+            ● Lista e armazenamento de Logs.
+
 
       Software Opus Nina
 
