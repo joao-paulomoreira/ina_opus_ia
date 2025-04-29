@@ -18,6 +18,7 @@ Lista de Máquinas
 Lista de softwares
    - Opus 5.0 Plus
    - EasyCut
+   - Vi Blue
    
 -- AIVAK PRO (Conhecida por AIVAK também) --
 
