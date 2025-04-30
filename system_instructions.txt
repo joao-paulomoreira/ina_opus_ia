@@ -38,7 +38,7 @@ Lista de softwares
    Recomendamos que a área de operação tenha no mínimo 0,75 m em sua frente e tenha disponível uma área total de 1,50 x 2,30.
    Peso: 490 kg (460,5/m²)
    O peso informado é composto pelo peso do equipamento com os discos, caixas de saída e sem a bobina de embalagem.
-   Alimentação: 220 Volts
+   Alimentação (Voltagem, tensão elétrica): 220 Volts
    Utilização do conector padrão com aterramento para 10 amperes. Permitindo a utilização de estabilizador.
    Potência Ativa: 1800 Watts
 
@@ -144,7 +144,7 @@ Lista de softwares
    Recomendamos que a área de operação tenha no mínimo de 0,70 m em sua frente e tenha disponível uma área total de 1,50 x 2,10 m.
    Peso com suporte: 218 kg (485 kg/m2)
    O peso informado é apenas do equipamento, o peso do equipamento composto com o suporte de integração é de +/- 300Kg (667 Kg/m2)
-   Alimentação: 220 Volts
+   Alimentação (Voltagem, tensão elétrica): 220 Volts
    Utilização do conector padrão com aterramento para 10 amperes
    Permitido a utilização de estabilizador externo devidamente especificado
    Potência: 1200 Watts
@@ -203,7 +203,7 @@ Lista de softwares
    Recomendamos que a área de operação tenha no mínimo de 0,70 m em sua frente e tenha disponível uma área total de 1,50 x 1,50 m.
    Peso: 125 kg (232 kg/m2)
    O peso informado é composto pelo peso do equipamento com a mesa de disco com os discos, caixas de saída e a bandeja com suporte.
-   Alimentação: 220 Volts
+   Alimentação (Voltagem, tensão elétrica): 220 Volts
    Utilização do conector padrão com aterramento para 10 amperes
    Permitido a utilização de estabilizador externo devidamente especificado
    Potência: 1200 Watts
@@ -269,7 +269,7 @@ Lista de softwares
    Recomendamos que a área de operação tenha no mínimo de 0,7 mts em sua frente..O equipamento possui a manutenção na parte traseira e lateral, onde recomendamos que ele esteja em uma área com possibilidade de movimentação de 0,7 mts para realização de sua manutenção. O equipamento possui o abastecimento de insumos na lateral esquerda, portanto recomendamos um corredor livre de 0,7 mts.
    Peso: 185 kg (295,9 kg/m2)
    O peso informado é composto pelo peso do equipamento com os discos e caixas de saída.
-   Alimentação: 220 Volts
+   Alimentação (Voltagem, tensão elétrica): 220 Volts
    Utilização do conector padrão com aterramento para 10 amperes
    Permitido a utilização de estabilizador externo devidamente especificado
    Potência: 1200 Watts
@@ -332,7 +332,7 @@ Lista de softwares
    Recomendamos que a área de operação tenha no mínimo de 0,75 m em sua frente e tenha disponível uma área total de 0,90 x 2,30 m.
    Peso: 83 kg (237 kg/m2)
    O peso informado é composto pelo peso do equipamento, caixas de saída e sem a bobina de embalagem.
-   Alimentação: 220 Volts
+   Alimentação (Voltagem, tensão elétrica): 220 Volts
    Utilização do conector padrão com aterramento para 10 amperes
    Permitido a utilização de estabilizador externo devidamente especificado
    Potência: 700 Watts
@@ -397,7 +397,7 @@ Lista de softwares
    Recomendamos que a área de operação tenha no mínimo de 0,70 m em sua frente e tenha disponível uma área total de 1,60 x 2,20 m.
    Peso: 298 kg (248 kg/m2)
    O peso informado é composto pelo peso do equipamento com os discos, caixas de saída e sem a bobina de embalagem.
-   Alimentação 220 Volts
+   Alimentação (Voltagem, tensão elétrica): 220 Volts
    Utilização do conector padrão com aterramento para 10 amperes Permitido a utilização de estabilizador externo devidamente especificado
    Potência: 660 Watts
 
@@ -477,7 +477,7 @@ Lista de softwares
       Peso módulo Base: 250 kg (576 kg/m2)
       O peso informado é composto pelo peso do equipamento com os discos, caixas de saída e sem a bobina de embalagem.
       Peso módulo Auxiliar: 235 kg
-      Alimentação: 220 Volts
+      Alimentação (Voltagem, tensão elétrica): 220 Volts
       Utilização do conector padrão com aterramento para 10 amperes
       Permitido a utilização de estabilizador externo devidamente especificado
       Potência: 2200 Watts
@@ -534,7 +534,7 @@ Lista de softwares
    Dimensões totais do equipamento
    Peso: 180 kg (113 kg/m2)
    O peso informado é composto pelo peso do equipamento
-   Alimentação: 220 Volts
+   Alimentação (Voltagem, tensão elétrica): 220 Volts
    Utilização do conector padrão com aterramento para 10 amperes
    Permitido a utilização de estabilizador externo devidamente especificado
    Potência: 600 Watts
