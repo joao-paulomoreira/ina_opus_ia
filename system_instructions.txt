@@ -808,7 +808,7 @@ Informações dos Softwares
 
 Materiais
 
-   Material BOPP com Biodegradação Acelerada
+   --Material BOPP com Biodegradação Acelerada--
         A Opus Packaging oferece um material de embalagem biodegradável especializado para aplicações farmacêuticas. Este filme de polipropileno de dupla face, disponível em versões transparente ou branco perolizado, pode ser selado a quente em ambos os lados, com uma temperatura inicial de selagem de 105°C no lado não tratado. O material possui tratamento externo para impressão e/ou laminação.
       O polipropileno é o segundo produto plástico mais produzido mundialmente (depois do polietileno) e é comumente usado em embalagens e rótulos. Este material BOPP específico combina funcionalidade tradicional com benefícios ambientais aprimorados.
       Características Principais
@@ -870,6 +870,80 @@ Materiais
       Manter a embalagem original até o uso
       Evitar quedas, batidas e rolagem das bobinas
       Armazenar em temperatura ambiente entre 18 e 28°C e umidade relativa do ar superior a 40%
+
+   --MATERIAL COEX COM BIODEGRADAÇÃO ACELERADA--
+      1. DESCRIÇÃO GERAL
+      A embalagem EPD compreende um coextrusado de várias camadas de Polietileno e Polipropileno, o que confere alta resistência a ruptura e maior transparência da embalagem, destacando assim o produto do seu interior.
+      A tecnologia dos filmes EPD permite atingir grande resistência mecânica em espessuras inferiores à de filmes convencionais, o resultado é uma embalagem de alta qualidade e baixo impacto ambiental.
+      2. PRINCIPAIS CARACTERÍSTICAS DO MATERIAL
+      
+      Insumo biodegradável de acordo com RDC 51 e RDC 105 da Anvisa e normas ASTM D5511 / ASTM D6601
+      Tratamento de superfície exterior para impressão
+      Selável a quente em ambos os lados, com uma temperatura de vedação inicial de 130º no lado não tratado
+      Propriedades antiestáticas
+      Baixo coeficiente de fricção
+      Ótima estanqueidade ao selar
+      Excelentes propriedades óticas para o material transparente
+      Propriedades ópticas especiais para o material branco perolado
+      Barreira à umidade
+      Reciclável e atóxico
+      
+      3. CONFORMIDADES DO MATERIAL
+      
+      Matéria prima em conformidade com regulamentos da ANVISA
+      Matéria prima em conformidade com regulamentos da UE, requisitos dos Regulamentos (CE) n. 1935/2004 e 2023/2006
+      Matéria prima em conformidade com regulamentos do MERCOSUL conforme algumas resoluções da GMC
+      Matéria prima em conformidade com regulamentos do US conforme algumas resoluções do título 21 da CRF (Code of Federal Regulations)
+      Matéria prima em conformidade com os requisitos da normativa ROHS
+      
+      4. APLICAÇÕES DO MATERIAL COEX
+      Processo de conversão, impressão e laminação para embalagens gerais de alimentos, como snacks, biscoitos, massas, barras de cereais, sorvetes, além do atendimento ao mercado de etiquetas, rótulos, higiene pessoal e sobre-embalagens, que no caso da Opuspac, é utilizado no processo de fabricação de embalagens para medicamentos e materiais médicos em sua embalagem original, não podendo ser utilizada como embalagem primária.
+      5. BIODEGRADABILIDADE ACELERADA
+      Se comparado ao plástico convencional, o material BOPP de biodegradabilidade acelerada traz as vantagens:
+      
+      Ser totalmente biodegradável, não afetando na reciclabilidade do plástico
+      Após testado, ser constatado que 79,6% de um material já virou CH4, biomassa e CO² em até 942 dias (gráfico)*
+      Leva apenas 5 anos para se decompor completamente em ambientes anaeróbios, segundo o teste ASTM D 5511
+      Carregar as mesmas características, força e resistência do plástico convencional
+      
+      Para iniciar o processo de biodegradação de uma embalagem plástica, você precisa criar as condições adequadas em ambiente anaeróbico para que esses microorganismos possam iniciar a quebra do plástico.
+      6. ESPECIFICAÇÕES DIMENSIONAIS
+      Embalagens para máquinas unitarizadoras Opus One:
+      DimensõesTolerânciaValores (mm)A+/- 1,5 mm220, 260 e 350B+/- 1,5 mm100 ou 150C+/- 1,5 mm70D+/- 1,5 mm38F+/- 1,5 mm15 ou 40
+      7. CARACTERÍSTICAS PADRÃO DE EMBALAGENS
+      As características apresentadas abaixo são aplicadas às embalagens já remanufaturadas em formato de bobinas:
+      
+      O início da fabricação da bobina pode gerar um pequeno acúmulo de material no tubete
+      Pode haver presença de variação de tonalidade entre branco e amarelado, em função do alinhamento entre os materiais branco e cristal
+      Pode haver variação de até +-2,0mm entre o alinhamento da bobina
+      
+      A referência de medição para a tolerância de +/- 2,0mm é a face do tubete
+      
+      
+      Devido ao tubete ser de papelão, pode haver presença de pequenas partículas, devido movimentação do produto
+      É permitido a execução de até 1 emenda por bobina
+      As bobinas contabilizam 30 embalagens adicionais, que não são contabilizadas
+      Nossas bobinas são embaladas em processo automático de plástico termo contrátil, mas não são herméticas
+      As bobinas podem apresentar menor tensão de bobinamento, característica do produto em função de mais presença de ar nas embalagens
+      
+      8. DADOS PARA ARMAZENAMENTO E UTILIZAÇÃO DO PRODUTO
+      O não cumprimento dos itens abaixo poderá interferir na aplicação e características do produto original:
+      
+      Priorizar a utilização do lote mais antigo, respeitando o prazo de validade
+      Acondicionar o material sobre uma superfície plana
+      As bobinas devem ser empilhadas sobre si mesmas na posição horizontal, evitando problemas de deformação e blocagem do material
+      Não empilhar mais do que 5 unidades
+      Não armazenar em ambiente com sujidade ou presença de pó
+      Não armazenar o produto em ambiente úmido e/ou molhado
+      Não armazenar o produto em exposição ao sol
+      Manter a embalagem original do produto até o seu uso
+      Evitar quedas, batidas e rolagem das bobinas
+      Condições ideais de armazenagem: temperatura ambiente entre 18 e 28ºC e umidade relativa do ar superior a 40%
+      
+      9. NOTAS
+      
+      Os valores descritos nas tabelas não se constituem em especificação de produto, mas representam valores médios ou típicos para este produto.
+      As informações técnicas acima são baseadas na experiência de nossos fornecedores e são de caráter geral. As informações não devem ser consideradas ou interpretadas como garantia de adequação do produto especificado a uma finalidade ou a um uso pretendido por quem venha a tomar conhecimento das mencionadas informações.
 
 Tópicos importantes
 
