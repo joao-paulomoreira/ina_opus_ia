@@ -804,7 +804,59 @@ Informações dos Softwares
             Cadastro e gerenciamento de posições para produtos
             Leitura de códigos de barras por câmera no tablet
             Visualização e confirmação de impressão de etiquetas
-         
+
+
+Materiais
+
+Material BOPP com Biodegradação Acelerada
+   A Opus Packaging oferece um material de embalagem biodegradável especializado para aplicações farmacêuticas. Este filme de polipropileno de dupla face, disponível em versões transparente ou branco perolizado, pode ser selado a quente em ambos os lados, com uma temperatura inicial de selagem de 105°C no lado não tratado. O material possui tratamento externo para impressão e/ou laminação.
+   O polipropileno é o segundo produto plástico mais produzido mundialmente (depois do polietileno) e é comumente usado em embalagens e rótulos. Este material BOPP específico combina funcionalidade tradicional com benefícios ambientais aprimorados.
+   Características Principais
+   Este material se destaca por suas propriedades biodegradáveis, em conformidade com as regulamentações RDC 51 e RDC 105 da ANVISA, bem como com as normas ASTM D5511 e ASTM D6601. Oferece excelentes propriedades ópticas, particularmente na versão transparente, e propriedades ópticas especiais na versão branca perolizada.
+   O filme proporciona uma barreira eficaz contra umidade, sendo ao mesmo tempo reciclável e atóxico. Possui propriedades antiestáticas, baixo coeficiente de fricção e excelente estanqueidade ao selar. Ambos os lados podem ser selados a quente, com o lado não tratado tendo uma temperatura inicial de selagem de 105°C.
+   Certificações de Conformidade
+   As matérias-primas utilizadas neste filme BOPP estão em conformidade com múltiplos padrões regulatórios:
+   
+   Regulamentos da ANVISA no Brasil
+   Regulamentos da UE, atendendo aos requisitos dos Regulamentos (CE) nº 1935/2004 e 2023/2006
+   Regulamentos do MERCOSUL de acordo com resoluções específicas do GMC
+   Regulamentos dos EUA de acordo com resoluções específicas do Título 21 do Código de Regulamentos Federais (CFR)
+   
+   Aplicações
+   Este material BOPP é projetado para processos de conversão, impressão e laminação para aplicações gerais de embalagens de alimentos, incluindo snacks, biscoitos, massas, barras de cereais e sorvetes. Também é adequado para etiquetas, produtos de higiene pessoal e sobre-embalagens. Na Opuspac, é especificamente utilizado para fabricação de embalagens farmacêuticas em sua forma original, embora não possa ser utilizado como embalagem primária.
+   Biodegradabilidade Acelerada
+   Comparado ao plástico convencional, o material BOPP de biodegradabilidade acelerada oferece vantagens significativas:
+   
+   É totalmente biodegradável, sem afetar a reciclabilidade do plástico
+   Testes demonstraram que 79,6% do material se transforma em CH4, biomassa e CO2 em até 942 dias
+   Leva apenas 5 anos para se decompor completamente em ambientes anaeróbios, conforme o teste ASTM D 5511
+   Mantém as mesmas características, força e resistência do plástico convencional
+   
+   Para iniciar o processo de biodegradação de uma embalagem plástica, é necessário criar condições adequadas em ambiente anaeróbico para que os microrganismos possam começar a quebrar o plástico.
+   Especificações Dimensionais
+   As embalagens são produzidas em diferentes dimensões conforme o tipo de máquina unitarizadora a ser utilizada. Há medidas específicas para máquinas regulares e para máquinas Opus One, com tolerâncias de +/- 1,5mm em todas as dimensões.
+   Características Padrão das Embalagens
+   As bobinas de embalagem apresentam algumas características padrão:
+   
+   O início da fabricação pode gerar um pequeno acúmulo de material no tubete
+   Pode haver variação de tonalidade entre branco e amarelado devido ao alinhamento dos materiais
+   É possível uma variação de até +/-1,5mm no alinhamento da bobina com a face do tubete
+   Por ser de papelão, o tubete pode liberar pequenas partículas durante a movimentação
+   É permitida até uma emenda por bobina
+   Cada bobina contém 40 embalagens adicionais não contabilizadas
+   As bobinas são embaladas em processo automático com plástico termocontrátil, mas não são herméticas
+   
+   Armazenamento e Utilização
+   Para preservar as características originais do produto, recomenda-se:
+   
+   Priorizar a utilização do lote mais antigo, respeitando o prazo de validade
+   Acondicionar o material sobre superfície plana
+   Empilhar as bobinas na posição horizontal, máximo de 8 unidades
+   Evitar ambientes com sujidade, pó, umidade ou exposição ao sol
+   Manter a embalagem original até o uso
+   Evitar quedas, batidas e rolagem das bobinas
+   Armazenar em temperatura ambiente entre 18 e 28°C e umidade relativa do ar superior a 40%
+
 Tópicos importantes
 
    Conteúdos proibidos:
