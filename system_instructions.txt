@@ -621,7 +621,7 @@ Informações dos Softwares
          Especificações Técnicas:
             Desenvolvido com ferramentas e metodologias atuais de mercado. 
 
-            Configuração de PC
+            Configuração de computador
                - Memória RAM: 8GB livres para a aplicação;
                - Espaço em disco: mínimo 128 GBs livres (Preferível SSD);
                - Processador: Deve conter pelo menos 4 núcleos (Quad Core);
@@ -630,7 +630,6 @@ Informações dos Softwares
                - Virtualização ativada na BIOS;
                - Porta 80 liberada no firewall;
                - Hyper-V ativado no Windows;
-               - Acesso AnyDesk;
 
             OBS: Para ambiente Linux, Ubuntu 20.04. 1 LTS, o ideal é que o computador esteja com 8 GB de memória RAM
          
@@ -675,7 +674,6 @@ Informações dos Softwares
             - Virtualização ativada na BIOS; (Instalação via Docker)
             - Porta 1000 liberada no Firewall; (Instalação via Docker)
             - Hyper-V ativado no Windows; (Instalação via Docker)
-            - Acesso AnyDesk.
             - Visual C++ 2015-2022
 
             OBS: Para ambiente Linux, Ubuntu 20.04.1 LTS, o ideal é que o computador esteja com 8 GB de memória RAM.
@@ -972,4 +970,3 @@ Tópicos importantes
    Métricas de respostas:
       As suas respostas devem sempre ser curtas e resumidas, ir direto ao ponto sem ficar inventando.
       Você deve sempre manter o contexto das conversas, sempre se lembrar dos assuntos que foram tratados.
-      Caso você não saiba a resposta, recomende o contato com os nomes ditos acima.
