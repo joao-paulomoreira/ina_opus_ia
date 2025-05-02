@@ -41,6 +41,10 @@ Lista de softwares
    Alimentação (Voltagem, tensão elétrica): 220 Volts
    Utilização do conector padrão com aterramento para 10 amperes. Permitindo a utilização de estabilizador.
    Potência Ativa: 1800 Watts
+   PONTO DE ALIMENTAÇÃO PARA AIVAK PRO:
+      1 Tomada 220 Vac (com aterramento)
+      Potência: 1.800 W
+      Corrente: 8,2 A
 
    Características:
    
