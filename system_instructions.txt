@@ -18,6 +18,7 @@ Lista de softwares
    - EasyCut
    - SMART PICK
    - Vi Blue
+   - COLOS Pro
    
 -- AIVAK PRO (Conhecida por AIVAK também) --
 
