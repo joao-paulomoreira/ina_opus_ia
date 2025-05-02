@@ -1015,3 +1015,119 @@ Informações Extras
 
 Para Operar as máquinas da opuspac, é necessáiro pelo menos 1 colaborador
 As máquinas da Opuspac operam com potência 220V
+
+DIMENSÕES DAS EMBALAGENS POR MÁQUINA
+Dimensões para AIVAK PRO
+
+Blister, embalagem: 70 x 65 mm
+Ampola pequena: 70 x 97 mm
+Ampola Grande ou Frasco: 70 x 130 mm
+Área de impressão (L x C):
+
+Para embalagem 70 x 65 mm: 50 x 28 mm
+Para embalagem 70 x 97 mm: 50 x 28 mm
+Para embalagem 70 x 130 mm: 50 x 60 mm
+
+
+Limites dimensionais:
+
+Blister: máximo de 25 x 33 mm
+Ampola: diâmetro máximo 25 mm, altura máxima 90 mm
+Flaconete: máximo de 22 x 12 mm, altura máxima 90 mm
+Cartela: mínimo de 33 x 68 mm, máximo de 100 x 135 mm
+
+
+
+Dimensões para BC200
+
+Limites dimensionais do Blister:
+
+Máximo: 18 x 25 mm
+Diagonal máxima: 30,8 mm
+Altura máxima: 9,5 mm
+
+
+
+Dimensões para OPUS 30G
+
+Blister, embalagem: 70 x 65 mm
+Ampola Pequena: 70 x 97 mm
+Ampola Grande ou Frasco: 70 x 130 mm
+KIT de vários produtos: 90 x 195 mm
+Limites dimensionais:
+
+Blister: máximo de 18 x 25 mm, diagonal máxima de 30,8 mm, altura máxima de 9,5 mm
+Ampola: diâmetro máximo 18,5 mm, altura máxima 90 mm
+Flaconete: máximo de 22 x 12 mm, altura máxima 90 mm
+
+
+
+Dimensões para OPUS FLAG
+
+Etiquetas: 25,0 x 75,0 mm
+Limites dimensionais para Ampola:
+
+Diâmetro mínimo: 8 mm
+Diâmetro máximo: 25 mm
+Altura máxima: 120 mm
+
+
+
+Dimensões para OPUS NINA
+
+Blister: 70 x 70 mm
+Ampola Pequena: 70 x 100 mm
+Ampola Grande ou Frasco: 70 x 140 mm
+Montagem de KITs: 140 x 230 mm
+Limites dimensionais:
+
+Blister: máximo de 25 x 36 mm, diagonal máxima de 43,8 mm, altura máxima de 9,5 mm
+Ampolas pequenas: diâmetro máximo 18,5 mm, altura máxima 90 mm
+Flaconete/Ampolas Grandes: máximo de 22 x 12 mm, altura máxima 90 mm
+
+
+
+Dimensões para PIK ONE
+
+Compartimentos configuráveis para embalagens:
+
+60x60 / 70x65 mm (para Blisters)
+60x100 / 70x95 / 70x130 mm (para Ampolas)
+Ampolas Flag: até diâmetro 25 mm, altura máxima 120 mm
+Ampolas ou frascos: até diâmetro 40 mm, altura máxima 120 mm
+
+
+Capacidade por tipo:
+
+60x60 / 70x65 / 60x100 / 70x97 / 70x130: até 18 posições
+Ampolas até diâmetro 24 mm: 18 posições
+Ampolas acima de diâmetro 24 mm: máximo 15 posições (dependendo da configuração)
+
+
+
+Dimensões para OPUS PICK
+
+Compartimentos configuráveis para embalagens:
+
+60x60 / 70x65 mm (para Blisters)
+60x100 / 70x95 / 70x130 mm (para Ampolas)
+Ampolas Flag: até diâmetro 25 mm, altura máxima 120 mm
+Ampolas ou frascos: até diâmetro 40 mm, altura máxima 120 mm
+
+
+
+Dimensões para Máquinas Unitarizadoras (exceto Opus One)
+
+Dimensão A: 65 mm, 97 mm, 130 mm, 195 mm
+Dimensão B: 70 mm ou 90 mm
+Dimensão C: 32,5 mm, 48,5 mm, 65 mm, 97,5 mm
+Dimensão D: 18,5 mm ou 54 mm
+Tolerância: +/- 1,5 mm em todas as dimensões
+
+Dimensões para Máquinas Unitarizadoras Opus One
+
+Dimensão A: 75 mm, 130 mm, 220 mm e 260 mm
+Dimensão B: 70 mm, 100 mm e 150 mm
+Dimensão C: 55 mm ou 70 mm
+Dimensão D: 18,5 mm ou 54 mm
+Tolerância: +/- 1,5 mm em todas as dimensões
