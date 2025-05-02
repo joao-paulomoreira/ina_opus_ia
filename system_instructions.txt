@@ -621,15 +621,16 @@ Informações dos Softwares
          Especificações Técnicas:
             Desenvolvido com ferramentas e metodologias atuais de mercado. 
 
-            - Memória RAM: 8GB livres para a aplicação;
-            - Espaço em disco: mínimo 128 GBs livres (Preferível SSD);
-            - Processador: Deve conter pelo menos 4 núcleos (Quad Core);
-            - Windows 10 Pro Versão 2004 ou superior;
-            - Usuário Administrador liberado para instalação;
-            - Virtualização ativada na BIOS;
-            - Porta 80 liberada no firewall;
-            - Hyper-V ativado no Windows;
-            - Acesso AnyDesk;
+            Configuração de PC
+               - Memória RAM: 8GB livres para a aplicação;
+               - Espaço em disco: mínimo 128 GBs livres (Preferível SSD);
+               - Processador: Deve conter pelo menos 4 núcleos (Quad Core);
+               - Windows 10 Pro Versão 2004 ou superior;
+               - Usuário Administrador liberado para instalação;
+               - Virtualização ativada na BIOS;
+               - Porta 80 liberada no firewall;
+               - Hyper-V ativado no Windows;
+               - Acesso AnyDesk;
 
             OBS: Para ambiente Linux, Ubuntu 20.04. 1 LTS, o ideal é que o computador esteja com 8 GB de memória RAM
          
