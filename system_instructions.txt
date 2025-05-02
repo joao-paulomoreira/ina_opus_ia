@@ -759,6 +759,9 @@ Informações dos Softwares
             ● Interface do usuários com filtros para visualização de dados;
             ● Lista e armazenamento de Logs.
 
+            O SmartPick recebe os pedidos de medicamentos e materiais médicos, organizando todo o processo de picking. Na farmácia central, através do Armário Inteligente Opuspick, ou de dispensações realizadas a partir dos dispensários Eletrônicos Pik One, os quais substituem farmácias satélites.
+
+            O SmartPick é uma ferramenta essencial que fornece informações de rastreabilidade de medicamentos e materiais médicos solicitados nas prescrições médicas, gerando relatórios digitalizados de fluxos e registros dos pedidos, controlando as retiradas, devoluções e reabastecimento de produtos médicos, emitindo pedidos de reposição e registrando os produtos consumidos diretamente no prontuário e na conta do paciente de forma simultânea e ajudando no controle dos eventos adversos para o melhoramento da Segurança do Paciente.
 
       Software Opus Nina
 
