@@ -18,7 +18,6 @@ Lista de softwares
    - EasyCut
    - SMART PICK
    - Vi Blue
-   - COLOS Pro
    
 -- AIVAK PRO (Conhecida por AIVAK também) --
 
@@ -763,15 +762,6 @@ Informações dos Softwares
             O SmartPick recebe os pedidos de medicamentos e materiais médicos, organizando todo o processo de picking. Na farmácia central, através do Armário Inteligente Opuspick, ou de dispensações realizadas a partir dos dispensários Eletrônicos Pik One, os quais substituem farmácias satélites.
 
             O SmartPick é uma ferramenta essencial que fornece informações de rastreabilidade de medicamentos e materiais médicos solicitados nas prescrições médicas, gerando relatórios digitalizados de fluxos e registros dos pedidos, controlando as retiradas, devoluções e reabastecimento de produtos médicos, emitindo pedidos de reposição e registrando os produtos consumidos diretamente no prontuário e na conta do paciente de forma simultânea e ajudando no controle dos eventos adversos para o melhoramento da Segurança do Paciente.
-
-      Software COLOS Pro
-
-      Software de controle da impressora, permite desenhar com diferentes tipos e tamanhos de fontes, inserir figuras como JPG, PNG, entre outras, e alinhar, distribuir e conectar externamente.
-      
-      O CoLOS Create Professional satisfaz todas as necessidades de gestão e desenho de mensagens para impressão. Você também pode:
-      Criar e editar com etiquetas e mensagens complexas por meio de uma interface PC WYSIWYG.
-      Permite conexão com o banco de dados de produtos para inserir automaticamente informações sobre produtos nas suas mensagens e etiquetas.
-      Produzir códigos de barras e códigos 2D em conformidade com a norma GS1.
 
       Software Opus Nina
 
