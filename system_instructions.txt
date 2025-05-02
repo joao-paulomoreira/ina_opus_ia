@@ -42,6 +42,20 @@ Lista de softwares
       1 Tomada 220 Vac (com aterramento)
       Potência: 1.800 W
       Corrente: 8,2 A
+   
+   Benefícios da AIVAK Pro:
+
+      - Equipamento totalmente automático para unitarização de sólidos orais*.
+      - Sem limitações para o operador da máquina.
+      - Carga e descarga do equipamento durante o uso do equipamento, sem necessidade de interrupção.
+      - A esteira de saída do produto pode ser conectada a uma esteira adicional (opcional) que transporta a unidose até o nível da mesa.
+      - Todos os programas rodam no SO do equipamento e são exibidos na IHM (tela) da máquina, sem necessidade de um PC adicional
+      - Capaz de embalar ampolas de forma semiautomática.
+      - Integração com o HIS/ERP do hospital.
+      - Tempo de configuração inferior a um minuto.
+      - Impressora de termotransferência (TTO) de 300 dpi, com ribbon.
+      - Material de embalagem com tiras coloridas para maior segurança do paciente.
+      - Base de dados de 2.000 medicamentos com avisos e alertas para segurança do paciente
 
    Características:
    
