@@ -3,3 +3,23 @@
     {"role": "user":, "content": "Posso armazenar medicamentos da portaria 344 nos Pik One?"},
     {"role": "assistant":, "content": "Sim. PIK One pode e deve trabalhar com medicamentos controlados, uma vez que atende a Portaria 344 (que trata de medicamentos Controlados pela ANVISA e Polícia Federal)."}
 ]}
+{"messages":[
+    {"role": "system", "content": ""},
+    {"role": "user", "content": ""},
+    {"role": "assistant", "content": ""}
+]}
+{"messages":[
+    {"role": "system", "content": ""},
+    {"role": "user", "content": ""},
+    {"role": "assistant", "content": ""}
+]}
+{"messages":[
+    {"role": "system", "content": ""},
+    {"role": "user", "content": ""},
+    {"role": "assisant", "content": ""}
+]}
+{"messages":[
+    {"role": "system", "content": ""},
+    {"role": "user", "content": ""},
+    {"role": "assistant", "content": ""}
+]}
