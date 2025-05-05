@@ -615,15 +615,6 @@ Especificações Técnicas
 Desenvolvido com ferramentas e metodologias atuais de mercado.
 Configuração de computador
 
-Memória RAM: 8GB livres para a aplicação
-Espaço em disco: mínimo 128 GBs livres (Preferível SSD)
-Processador: Deve conter pelo menos 4 núcleos (Quad Core)
-Windows 10 Pro Versão 2004 ou superior
-Usuário Administrador liberado para instalação
-Virtualização ativada na BIOS
-Porta 80 liberada no firewall
-Hyper-V ativado no Windows
-
 OBS: Para ambiente Linux, Ubuntu 20.04. 1 LTS, o ideal é que o computador esteja com 8 GB de memória RAM
 Menus e Submenus
 Os menus estão posicionados na parte inferior de qualquer tela da aplicação e rem como objetivo facilitar com que o usuário navegue dentro do sistema.
@@ -656,16 +647,6 @@ Resumo
 O software EasyCut permite realizar de maneira personalizada a criação de receitas para o corte de cartelas de medicamentos.
 Especificações Técnicas
 Desenvolvido com ferramentas e metodologias atuais de mercado.
-
-Memória RAM: 8GB livres para a aplicação
-Espaço em disco: mínimo 128GBs livres (Preferível SSD)
-Processador: Deve conter pelo menos 4 núcleos (Quad Core)
-Windows 10 Pro versão 2004 ou superior
-Usuário Administrador liberado para instalação
-Virtualização ativada na BIOS (Instalação via Docker)
-Porta 1000 liberada no Firewall (Instalação via Docker)
-Hyper-V ativado no Windows (Instalação via Docker)
-Visual C++ 2015-2022
 
 OBS: Para ambiente Linux, Ubuntu 20.04.1 LTS, o ideal é que o computador esteja com 8 GB de memória RAM.
 Menus e Submenus
@@ -1220,3 +1201,13 @@ o	Modo Integrado.txt: Selecione um arquivo com extensão ".txt" com as informaç
 •	Você poderá acompanhar o progresso da operação
 •	Quando concluído, clique em "Fechar" para encerrar
 Observação importante: Para que o processo de unitarização seja concluído, a data de validade do medicamento deve ser maior do que a data atual da unitarização.
+
+Pergunta: Qual a configuração que um computador que ter para rodar o software da Opuspac?
+Resposta: Memória RAM: 8GB livres para a aplicação
+Espaço em disco: mínimo 128 GBs livres (Preferível SSD)
+Processador: Deve conter pelo menos 4 núcleos (Quad Core)
+Windows 10 Pro Versão 2004 ou superior
+Usuário Administrador liberado para instalação
+Virtualização ativada na BIOS
+Porta 80 liberada no firewall
+Hyper-V ativado no Windows
