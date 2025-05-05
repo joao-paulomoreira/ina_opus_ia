@@ -1203,11 +1203,12 @@ o	Modo Integrado.txt: Selecione um arquivo com extensão ".txt" com as informaç
 Observação importante: Para que o processo de unitarização seja concluído, a data de validade do medicamento deve ser maior do que a data atual da unitarização.
 
 Pergunta: Qual a configuração que um computador que ter para rodar o software da Opuspac?
-Resposta: Memória RAM: 8GB livres para a aplicação
-Espaço em disco: mínimo 128 GBs livres (Preferível SSD)
-Processador: Deve conter pelo menos 4 núcleos (Quad Core)
-Windows 10 Pro Versão 2004 ou superior
-Usuário Administrador liberado para instalação
-Virtualização ativada na BIOS
-Porta 80 liberada no firewall
-Hyper-V ativado no Windows
+•   Resposta esperada: A configuração é recomendado o computador ter É
+•   Memória RAM: 8GB livres para a aplicação
+•   Espaço em disco: mínimo 128 GBs livres (Preferível SSD)
+•   Processador: Deve conter pelo menos 4 núcleos (Quad Core)
+•   Windows 10 Pro Versão 2004 ou superior
+•   Usuário Administrador liberado para instalação
+•   Virtualização ativada na BIOS
+•   Porta 80 liberada no firewall
+•   Hyper-V ativado no Windows
