@@ -1131,3 +1131,102 @@ Dimensão B: 70 mm, 100 mm e 150 mm
 Dimensão C: 55 mm ou 70 mm
 Dimensão D: 18,5 mm ou 54 mm
 Tolerância: +/- 1,5 mm em todas as dimensões
+
+Exemplos de perguntas e respostas
+
+Pergunta: Posso armazenar medicamentos da portaria 344 nos PIK One?
+Resposta esperada: Sim. PIK One pode e deve trabalhar com medicamentos controlados, uma vez que atende a Portaria 344 (que trata de medicamentos Controlados pela ANVISA e Polícia Federal).
+
+Pergunta: Posso armazenar medicamentos da cadeia do frio no PIK One?
+Resposta esperada: Não. Medicamentos da Cadeia do Frio são medicamentos que precisam ser armazenados em temperatura controlada de 2 a 8ºC. Hoje não temos disponível nenhum modelo de dispensário com refrigeração e controle de temperatura.
+
+Pergunta: Qual a voltagem da máquina (Nome de alguma máquina)
+Resposta esperada: A voltagem da máquina (Nome de alguma máquina) é de 220 Volts
+
+Pergunta: Quantos operadores são necessários para operar cada equipamento da Opuspac?
+Resposta esperada: Os equipamentos da Opuspac precisam de 1 operador, no mínimo.
+
+Pergunta: Quais os equipamentos que embalam produtos?
+Resposta esperada: AIVAK PRO - Unitarização robótica de blisteres e ampolas.
+OPUS 30G - Embalagem de lotes e impressão em embalagens pré-confeccionadas.
+OPUS NINA - Embalagem de pequenos lotes.
+
+Pergunta: Qual especificações necessárias que meu computador precisa para funcionar para cada um desses software?
+Resposta esperada: Memória RAM: 8GB livres para a aplicação
+Espaço em disco: mínimo 128 GB livres (preferível SSD)
+Processador: deve conter pelo menos 4 núcleos (Quad Core)
+Sistema Operacional: Windows 10 Pro versão 2004 ou superior
+Usuário: Administrador liberado para instalação
+Virtualização: ativada na BIOS
+Porta 80: liberada no firewall
+Hyper-V: ativado no Windows
+
+Pergunta: Quantos operadores são necessários para operar cada equipamento da Opuspac?
+Resposta esperada: Para operar cada equipamento da Opuspac, é necessário apenas 1 colaborador.
+
+Pergunta: Quais são as mediada de bobinas fornecidas pela Opuspac?
+Resposta esperada: As bobinas fornecidas pela Opuspac têm as seguintes dimensões:
+
+65 mm, 97 mm, 130 mm, 195 mm, 70 mm ou 90 mm de largura
+As tolerâncias são de +/- 1,5 mm em todas as dimensões.
+
+
+Pergunta: Quais sãos as medidas de bobinas usadas na Opus 30G?
+Resposta esperada: Blister: 70 x 65 mm
+Ampola Pequena: 70 x 97 mm
+Ampola Grande ou Frasco: 70 x 130 mm
+KIT de vários produtos: 90 x 195 mm
+
+
+Pergunta: Quais sãos as dimensões usadas de embalagens no equipamento Opus 30G?
+Resposta esperada: As dimensões usadas de embalagens no equipamento OPUS 30G são:
+
+Blister: 70 x 65 mm
+Ampola Pequena: 70 x 97 mm
+Ampola Grande ou Frasco: 70 x 130 mm
+KIT de vários produtos: 90 x 195 mm
+
+
+Pergunta: Quantos pontos de corte são possíveis de mapear no Easy Cut?
+Resposta esperada: O software EasyCut permite mapear até 60 pontos de corte.
+
+Pergunta: Qual é a forma de obter a imagem da cartela para fazer o mapeamento no Easy Cut?
+Resposta esperada: Utilizando uma Webcam em um gabarito fornecido pela Opuspac, quando adquirido o software EasyCut.
+
+
+Pergunta: Quais são modelos de impressoras para fazer impressão nas embalagens?
+Resposta esperada: Pode ter essas informações como complementares a resposta, mas deveria informar os modelos e fabricantes das impressoras usadas nos equipamentos por exemplo: VideoJet 6230, MarkemI mag X45, etc...
+
+
+Pergunta: Com qual software desenvolve o layout da impressão nas embalagens?
+Resposta esperada: Os softwares para desenvolvimento dos layouts e fornecido de acordo com a impressora instalado no equipamento. Esse software que é fornecido pelo fabricante da impressora.
+
+Pergunta: Usando o Opus 5, me descreva o passo a passo para enviar as informações para a impressora do equipamento
+Resposta esperada: 1. Acesse a Tela de Unitarização
+•	No menu inferior da aplicação, clique no botão "Unitarizar" (representado por um ícone de pasta)
+2. Selecione a Impressora
+•	Se houver mais de uma impressora cadastrada, será exibida uma tela para seleção
+•	Escolha a impressora desejada na lista suspensa
+•	Se houver apenas uma impressora cadastrada, esta etapa será pulada automaticamente
+3. Continue o Processo
+•	Clique no botão verde "Continuar" para prosseguir
+4. Selecione o Produto
+•	De acordo com o modo de operação configurado, escolha o medicamento a ser unitarizado: 
+o	Modo Manual: Selecione da lista de medicamentos cadastrados
+o	Modo Datamatrix: Faça a leitura do QR Code do medicamento
+o	Modo Integrado.txt: Selecione um arquivo com extensão ".txt" com as informações
+5. Edite os Campos Necessários
+•	Após selecionar o produto, será exibida uma tela para edição
+•	Apenas os campos marcados como "editáveis" no momento da criação do layout poderão ser alterados
+•	Campos obrigatórios (marcados com asterisco vermelho) devem ser preenchidos
+6. Envie para a Impressora
+•	Depois de preencher todos os campos necessários, clique no botão verde "Enviar para impressora"
+7. Revise e Confirme
+•	Uma tela de confirmação será exibida com os dados inseridos
+•	Confira se todas as informações estão corretas
+•	Clique no botão verde "Enviar" para finalizar
+8. Acompanhe a Impressão
+•	A tela da impressora será exibida na aplicação
+•	Você poderá acompanhar o progresso da operação
+•	Quando concluído, clique em "Fechar" para encerrar
+Observação importante: Para que o processo de unitarização seja concluído, a data de validade do medicamento deve ser maior do que a data atual da unitarização.
