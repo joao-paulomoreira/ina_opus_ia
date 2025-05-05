@@ -1202,7 +1202,9 @@ o	Modo Integrado.txt: Selecione um arquivo com extensão ".txt" com as informaç
 •	Quando concluído, clique em "Fechar" para encerrar
 Observação importante: Para que o processo de unitarização seja concluído, a data de validade do medicamento deve ser maior do que a data atual da unitarização.
 
-Pergunta: Qual a configuração que um computador que ter para rodar o software da Opuspac?
+
+Configuração de computador para software:
+Quando te perguntarem sobre configuração de computador para rodar o software responda com a lista abaixo:
 •   Resposta esperada: A configuração é recomendado o computador ter É
 •   Memória RAM: 8GB livres para a aplicação
 •   Espaço em disco: mínimo 128 GBs livres (Preferível SSD)
