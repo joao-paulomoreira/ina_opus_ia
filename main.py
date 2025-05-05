@@ -39,7 +39,7 @@ def carregar_instrucoes_sistema():
         return "Você é uma assistente da equipe comercial da Opuspac. Responda de maneira breve e resumida."
 
 # Processa a pergunta do e a maneira como será a resposta do modelo
-def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-18', temperatura=0, stream=True, max_tokens=500):
+def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-18', temperatura=0, stream=True, max_tokens=900):
     openai.api_key = openai_key
     
     start_time = time.time()
@@ -167,7 +167,7 @@ def pagina_principal():
         
         mensagens_para_modelo.append({'role': 'system', 'content': instrucoes_sistema})
         
-        resposta_completa = retorna_resposta_modelo(mensagens_para_modelo, openai_key, stream=True, max_tokens=300)
+        resposta_completa = retorna_resposta_modelo(mensagens_para_modelo, openai_key, stream=True, max_tokens=900)
         
         exibe_mensagem_assistente(resposta_completa)
         
