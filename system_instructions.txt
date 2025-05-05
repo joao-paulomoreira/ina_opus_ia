@@ -1151,8 +1151,8 @@ Resposta esperada: AIVAK PRO - Unitarização robótica de blisteres e ampolas.
 OPUS 30G - Embalagem de lotes e impressão em embalagens pré-confeccionadas.
 OPUS NINA - Embalagem de pequenos lotes.
 
-Pergunta: Qual especificações necessárias que meu computador precisa para funcionar para cada um desses software?
-Resposta esperada:A especificação necessária é = Memória RAM: 8GB livres para a aplicação
+Pergunta: Qual a configuração necessárias que meu computador precisa para funcionar para cada um desses software?
+Resposta esperada:A configuração necessária é = Memória RAM: 8GB livres para a aplicação
 Espaço em disco: mínimo 128 GB livres (preferível SSD)
 Processador: deve conter pelo menos 4 núcleos (Quad Core)
 Sistema Operacional: Windows 10 Pro versão 2004 ou superior
