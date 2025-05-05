@@ -1,0 +1,5 @@
+{"messages":[
+    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nas políticas, produtos e especificações da empresa, de forma objetiva."},
+    {"role": "user":, "content": "Posso armazenar medicamentos da portaria 344 nos Pik One?"},
+    {"role": "assistant":, "content": "Sim. PIK One pode e deve trabalhar com medicamentos controlados, uma vez que atende a Portaria 344 (que trata de medicamentos Controlados pela ANVISA e Polícia Federal)."}
+]}
