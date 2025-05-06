@@ -37,3 +37,76 @@ Sistema Operacional: Windows 10 Pro versão 2004 ou superior
 As tolerâncias são de +/- 1,5 mm em todas as dimensões.
 "} 
 ]}
+{"messages":[
+    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."},
+    {"role": "user", "content": "Quais sãos as medidas de bobinas usadas na Opus 30G?"},
+    {"role": "assistant", "content": "Blister: 70 x 65 mm
+Ampola Pequena: 70 x 97 mm
+Ampola Grande ou Frasco: 70 x 130 mm
+KIT de vários produtos: 90 x 195 mm
+"}
+]}
+{"messages":[
+    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."},
+    {"role": "user", "content": "Quais sãos as dimensões usadas de embalagens no equipamento Opus 30G?"},
+    {"role": "assistant", "content": "As dimensões usadas de embalagens no equipamento OPUS 30G são:
+
+Blister: 70 x 65 mm
+Ampola Pequena: 70 x 97 mm
+Ampola Grande ou Frasco: 70 x 130 mm
+KIT de vários produtos: 90 x 195 mm
+"}
+]}
+{"messages":[
+    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."},
+    {"role": "user", "content": "Quantos pontos de corte são possíveis de mapear no Easy Cut?"},
+    {"role": "assistant", "content": "O software EasyCut permite mapear até 60 pontos de corte."}
+]}
+{"messages":[
+    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."},
+    {"role": "user", "content": "Qual é a forma de obter a imagem da cartela para fazer o mapeamento no Easy Cut?"},
+    {"role": "assistant", "content": "Utilizando uma Webcam em um gabarito fornecido pela Opuspac, quando adquirido o software EasyCut."}
+]}
+{"messages":[
+    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."},
+    {"role": "user", "content": "Quais são modelos de impressoras para fazer impressão nas embalagens?"},
+    {"role": "assistant", "content": "Pode ter essas informações como complementares a resposta, mas deveria informar os modelos e fabricantes das impressoras usadas nos equipamentos por exemplo: VideoJet 6230, MarkemI mag X45, etc..."}
+]}
+{"messages":[
+    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."},
+    {"role": "user", "content": "Com qual software desenvolve o layout da impressão nas embalagens?"},
+    {"role": "assistant", "content": "Os softwares para desenvolvimento dos layouts e fornecido de acordo com a impressora instalado no equipamento. Esse software que é fornecido pelo fabricante da impressora."}
+]}
+{"messages":[
+    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."},
+    {"role": "user", "content": "Usando o Opus 5, me descreva o passo a passo para enviar as informações para a impressora do equipamento"},
+    {"role": "assistant", "content": "1. Acesse a Tela de Unitarização
+•	No menu inferior da aplicação, clique no botão "Unitarizar" (representado por um ícone de pasta)
+2. Selecione a Impressora
+•	Se houver mais de uma impressora cadastrada, será exibida uma tela para seleção
+•	Escolha a impressora desejada na lista suspensa
+•	Se houver apenas uma impressora cadastrada, esta etapa será pulada automaticamente
+3. Continue o Processo
+•	Clique no botão verde "Continuar" para prosseguir
+4. Selecione o Produto
+•	De acordo com o modo de operação configurado, escolha o medicamento a ser unitarizado: 
+o	Modo Manual: Selecione da lista de medicamentos cadastrados
+o	Modo Datamatrix: Faça a leitura do QR Code do medicamento
+o	Modo Integrado.txt: Selecione um arquivo com extensão ".txt" com as informações
+5. Edite os Campos Necessários
+•	Após selecionar o produto, será exibida uma tela para edição
+•	Apenas os campos marcados como "editáveis" no momento da criação do layout poderão ser alterados
+•	Campos obrigatórios (marcados com asterisco vermelho) devem ser preenchidos
+6. Envie para a Impressora
+•	Depois de preencher todos os campos necessários, clique no botão verde "Enviar para impressora"
+7. Revise e Confirme
+•	Uma tela de confirmação será exibida com os dados inseridos
+•	Confira se todas as informações estão corretas
+•	Clique no botão verde "Enviar" para finalizar
+8. Acompanhe a Impressão
+•	A tela da impressora será exibida na aplicação
+•	Você poderá acompanhar o progresso da operação
+•	Quando concluído, clique em "Fechar" para encerrar
+Observação importante: Para que o processo de unitarização seja concluído, a data de validade do medicamento deve ser maior do que a data atual da unitarização.
+"}
+]}
