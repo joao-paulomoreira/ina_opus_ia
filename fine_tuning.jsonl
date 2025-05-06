@@ -110,3 +110,8 @@ o	Modo Integrado.txt: Selecione um arquivo com extensão ".txt" com as informaç
 Observação importante: Para que o processo de unitarização seja concluído, a data de validade do medicamento deve ser maior do que a data atual da unitarização.
 "}
 ]}
+{"messages":[
+    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."},
+    {"role": "user", "content": "Com qual software desenvolve o layout da impressão nas embalagens?"},
+    {"role": "assistant", "content": "Os software para desenvolvimento dos layout e fornecido de acordo com a impressora instalado no equipamento. Esse software que é fornecido pelo fabricate da impressora."}
+]}
