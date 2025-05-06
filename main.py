@@ -7,7 +7,6 @@ import os
 import fitz
 import logging
 import time
-import json
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
 
@@ -28,12 +27,6 @@ except:
     load_dotenv()
     openai_key = os.getenv("OPENAI_API_KEY")
 
-# Inicializa o cliente OpenAI
-openai.api_key = openai_key
-
-# Configuração do modelo fine-tuned
-FINE_TUNED_MODEL = "ft:gpt-3.5-turbo-0125:opuspac::8BxgTr4S"  # Substitua pelo ID do seu modelo fine-tuned
-
 # Carrega todo o treinamento no modelo
 def carregar_instrucoes_sistema():
     """Carrega todo o treinamento do modelo a partir de um arquivo externo"""
@@ -45,70 +38,48 @@ def carregar_instrucoes_sistema():
         logging.error(f"Erro ao carregar instruções do sistema: {e}")
         return "Você é uma assistente da equipe comercial da Opuspac. Responda de maneira breve e resumida."
 
-# Função para carregar o arquivo JSONL do fine-tuning
-def carregar_dados_fine_tuning():
-    try:
-        dados = []
-        with open('fine_tuning.jsonl', 'r', encoding='utf-8') as file:
-            for line in file:
-                dados.append(json.loads(line))
-        logging.info(f"Arquivo de fine-tuning carregado com {len(dados)} exemplos")
-        return dados
-    except Exception as e:
-        logging.error(f"Erro ao carregar dados de fine-tuning: {e}")
-        return []
-
-# Processa a pergunta e a maneira como será a resposta do modelo
-def retorna_resposta_modelo(mensagens, openai_key, modelo=None, temperatura=0, stream=True, max_tokens=900, usar_fine_tuned=True):
+# Processa a pergunta do e a maneira como será a resposta do modelo
+def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-18', temperatura=0, stream=True, max_tokens=900):
     openai.api_key = openai_key
     
-    # Define o modelo a ser usado (fine-tuned ou padrão)
-    if usar_fine_tuned and FINE_TUNED_MODEL:
-        modelo_usado = FINE_TUNED_MODEL
-    else:
-        modelo_usado = modelo if modelo else 'gpt-4o-mini-2024-07-18'
-    
     start_time = time.time()
-    logging.info(f"Processando mensagem com modelo {modelo_usado} e {len(mensagens)} entradas")
+    logging.info(f"Processando mensagem com {len(mensagens)} entradas")
     
-    try:
-        if stream:
-            response_stream = openai.ChatCompletion.create(
-                model=modelo_usado,
-                messages=mensagens,
-                temperature=temperatura,
-                max_tokens=max_tokens,
-                stream=True
-            )
-            
-            resposta_completa = ''
-            for chunk in response_stream:
-                if isinstance(chunk, dict) and 'choices' in chunk and len(chunk['choices']) > 0:
-                    delta = chunk['choices'][0].get('delta', {})
-                    resposta_completa += delta.get('content', '')
-                    
-            elapsed_time = time.time() - start_time
-            processing_rate = f'Resposta processada com sucesso em {elapsed_time:.2f} segundos'
-            
-            with open("processing_rate.txt", "a") as txt_file:
-                txt_file.write(processing_rate + "\n")
+    if stream:
+        response_stream = openai.ChatCompletion.create(
+            model=modelo,
+            messages=mensagens,
+            temperature=temperatura,
+            max_tokens=max_tokens,
+            stream=True
+        )
+        
+        resposta_completa = ''
+        for chunk in response_stream:
+            if isinstance(chunk, dict) and 'choices' in chunk and len(chunk['choices']) > 0:
+                delta = chunk['choices'][0].get('delta', {})
+                resposta_completa += delta.get('content', '')
                 
-            logging.info(processing_rate)
+        elapsed_time = time.time() - start_time
+        processing_rate = f'Resposta processada com sucesso em {elapsed_time:.2f} segundos'
+        
+        with open("processing_rate.txt", "a") as txt_file:
+            txt_file.write(processing_rate + "\n")
             
-            return resposta_completa
-        else:
-            response = openai.ChatCompletion.create(
-                model=modelo_usado,
-                messages=mensagens,
-                temperature=temperatura,
-                max_tokens=max_tokens
-            )
-            return response['choices'][0]['message']['content']
-    except Exception as e:
-        logging.error(f"Erro ao processar resposta do modelo: {e}")
-        return f"Ocorreu um erro ao processar sua solicitação: {str(e)}"
+        logging.info(processing_rate)
+        
+        return resposta_completa
+    else:
+        response = openai.ChatCompletion.create(
+            model=modelo,
+            messages=mensagens,
+            temperature=temperatura,
+            max_tokens=max_tokens
+        )
+        return response['choices'][0]['message']['content']
     
 # Carrega pastas com PDFs
+# OBS Optei por não seguir com arquivos PDFs, por isso não tem nenhum, um treinamento em txt é mais efetivo. Talvez sejam adicionados PDFs no futuro, mas no momento é apenas o treinamento em txt
 def carregar_pdfs(pasta):
     textos = {}
     try:
@@ -139,59 +110,10 @@ def buscar_resposta(textos, pergunta):
             respostas_encontradas.append(f"Resposta encontrada no arquivo {arquivo}: {texto[:100]}...")
     return respostas_encontradas if respostas_encontradas else ["Nenhuma resposta encontrada."]
 
-# Função para realizar o upload do arquivo de fine-tuning para a OpenAI
-def upload_file_for_fine_tuning():
-    try:
-        response = openai.File.create(
-            file=open("fine_tuning.jsonl", "rb"),
-            purpose="fine-tune"
-        )
-        file_id = response.id
-        logging.info(f"Arquivo enviado com sucesso. ID: {file_id}")
-        return file_id
-    except Exception as e:
-        logging.error(f"Erro ao enviar arquivo para fine-tuning: {e}")
-        return None
-
-# Função para criar um trabalho de fine-tuning
-def create_fine_tuning_job(file_id, model="gpt-3.5-turbo-0125"):
-    try:
-        response = openai.FineTuningJob.create(
-            training_file=file_id,
-            model=model,
-            suffix="opuspac"
-        )
-        job_id = response.id
-        logging.info(f"Trabalho de fine-tuning criado. ID: {job_id}")
-        return job_id
-    except Exception as e:
-        logging.error(f"Erro ao criar trabalho de fine-tuning: {e}")
-        return None
-
-# Função para verificar o status do trabalho de fine-tuning
-def check_fine_tuning_status(job_id):
-    try:
-        response = openai.FineTuningJob.retrieve(job_id)
-        status = response.status
-        logging.info(f"Status do trabalho de fine-tuning: {status}")
-        
-        if status == "succeeded":
-            fine_tuned_model = response.fine_tuned_model
-            logging.info(f"Modelo fine-tuned criado: {fine_tuned_model}")
-            return fine_tuned_model
-        
-        return None
-    except Exception as e:
-        logging.error(f"Erro ao verificar status do trabalho de fine-tuning: {e}")
-        return None
-
 # Responsavél por toda parte de comunicação/respostas ETC
 def inicializacao():
     if not 'mensagens' in st.session_state:
         st.session_state['mensagens'] = []
-    
-    if not 'fine_tuned_model' in st.session_state:
-        st.session_state['fine_tuned_model'] = FINE_TUNED_MODEL
         
 def exibe_mensagem_assistente(conteudo):
     col1, col2 = st.columns([1, 9])
@@ -219,37 +141,6 @@ def pagina_principal():
     
     st.header('Assistente Comercial', divider=True)
     
-    # Adicionar opção para usar o modelo fine-tuned
-    usar_fine_tuned = st.sidebar.checkbox('Usar modelo fine-tuned', value=True)
-    
-    # Exibir informações sobre o modelo fine-tuned no sidebar
-    if usar_fine_tuned:
-        st.sidebar.info(f"Usando modelo fine-tuned: {st.session_state.get('fine_tuned_model', FINE_TUNED_MODEL)}")
-    
-    # Botão para iniciar o processo de fine-tuning (apenas para testes)
-    if st.sidebar.button("Iniciar Novo Fine-Tuning"):
-        with st.spinner("Iniciando processo de fine-tuning..."):
-            file_id = upload_file_for_fine_tuning()
-            if file_id:
-                job_id = create_fine_tuning_job(file_id)
-                if job_id:
-                    st.sidebar.success(f"Fine-tuning iniciado. Job ID: {job_id}")
-                    st.session_state['job_id'] = job_id
-                else:
-                    st.sidebar.error("Erro ao criar job de fine-tuning")
-            else:
-                st.sidebar.error("Erro ao enviar arquivo")
-    
-    # Botão para verificar status do fine-tuning (apenas para testes)
-    if 'job_id' in st.session_state and st.sidebar.button("Verificar Status do Fine-Tuning"):
-        with st.spinner("Verificando status..."):
-            model_id = check_fine_tuning_status(st.session_state['job_id'])
-            if model_id:
-                st.sidebar.success(f"Fine-tuning concluído! Modelo: {model_id}")
-                st.session_state['fine_tuned_model'] = model_id
-            else:
-                st.sidebar.info("Fine-tuning ainda em andamento...")
-    
     if len(mensagens) == 0:
         mensagem_inicial = {'role': 'assistant', 'content': 'Me faça perguntas relacionadas as máquinas.'}
         mensagens.append(mensagem_inicial)
@@ -276,13 +167,7 @@ def pagina_principal():
         
         mensagens_para_modelo.append({'role': 'system', 'content': instrucoes_sistema})
         
-        resposta_completa = retorna_resposta_modelo(
-            mensagens_para_modelo, 
-            openai_key, 
-            stream=True, 
-            max_tokens=900,
-            usar_fine_tuned=usar_fine_tuned
-        )
+        resposta_completa = retorna_resposta_modelo(mensagens_para_modelo, openai_key, stream=True, max_tokens=900)
         
         exibe_mensagem_assistente(resposta_completa)
         
@@ -290,23 +175,6 @@ def pagina_principal():
         mensagens.append(nova_mensagem)
         
         st.session_state['mensagens'] = mensagens
-
-# Função para realizar o fine-tuning (pode ser chamada fora da interface)
-def realizar_fine_tuning():
-    file_id = upload_file_for_fine_tuning()
-    if file_id:
-        job_id = create_fine_tuning_job(file_id)
-        if job_id:
-            logging.info(f"Fine-tuning iniciado. Job ID: {job_id}")
-            # Aguardar conclusão (em produção, isso deve ser assíncrono)
-            import time
-            model_id = None
-            while not model_id:
-                time.sleep(60)  # Verificar a cada minuto
-                model_id = check_fine_tuning_status(job_id)
-            logging.info(f"Fine-tuning concluído. Modelo: {model_id}")
-            return model_id
-    return None
         
 # Roda efetivamente o modelo
 def main():
@@ -315,6 +183,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
-    # Descomente esta linha para realizar o fine-tuning fora da interface
-realizar_fine_tuning()
