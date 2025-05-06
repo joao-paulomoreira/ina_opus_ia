@@ -1,25 +1,39 @@
 {"messages":[
-    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nas políticas, produtos e especificações da empresa, de forma objetiva."},
+    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."},
     {"role": "user":, "content": "Posso armazenar medicamentos da portaria 344 nos Pik One?"},
     {"role": "assistant":, "content": "Sim. PIK One pode e deve trabalhar com medicamentos controlados, uma vez que atende a Portaria 344 (que trata de medicamentos Controlados pela ANVISA e Polícia Federal)."}
 ]}
 {"messages":[
-    {"role": "system", "content": ""},
-    {"role": "user", "content": ""},
-    {"role": "assistant", "content": ""}
+    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."},
+    {"role": "user", "content": "Posso armazenar medicamentos da cadeia do frio no PIK One?"},
+    {"role": "assistant", "content": "Não. Medicamentos da Cadeia do Frio são medicamentos que precisam ser armazenados em temperatura controlada de 2 a 8ºC. Hoje não temos disponível nenhum modelo de dispensário com refrigeração e controle de temperatura."}
 ]}
 {"messages":[
-    {"role": "system", "content": ""},
-    {"role": "user", "content": ""},
-    {"role": "assistant", "content": ""}
+    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."},
+    {"role": "user", "content": "Quantos operadores são necessários para operar cada equipamento da Opuspac?"},
+    {"role": "assistant", "content": "Os equipamentos da Opuspac precisam de 1 operador, no mínimo."}
 ]}
 {"messages":[
-    {"role": "system", "content": ""},
-    {"role": "user", "content": ""},
-    {"role": "assisant", "content": ""}
+    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."},
+    {"role": "user", "content": "Quais os equipamentos que embalam produtos?"},
+    {"role": "assisant", "content": "AIVAK PRO - Unitarização robótica de blisteres e ampolas.
+OPUS 30G - Embalagem de lotes e impressão em embalagens pré-confeccionadas.
+OPUS NINA - Embalagem de pequenos lotes.
+"}
 ]}
 {"messages":[
-    {"role": "system", "content": ""},
-    {"role": "user", "content": ""},
-    {"role": "assistant", "content": ""}
+    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."},
+    {"role": "user", "content": "Qual especificações necessárias que meu computador precisa para rodar um software da Opuspac?"},
+    {"role": "assistant", "content": "Memória RAM: 8GB livres para a aplicação
+Espaço em disco: mínimo 128 GB livres (preferível SSD)
+Processador: deve conter pelo menos 4 núcleos (Quad Core)
+Sistema Operacional: Windows 10 Pro versão 2004 ou superior
+"}
+]}
+{"messages":[
+    {"role": "system", "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."},
+    {"role": "user", "content": "Quais são as mediada de bobinas fornecidas pela Opuspac?"},
+    {"role": "assistant", "content": "65 mm, 97 mm, 130 mm, 195 mm, 70 mm ou 90 mm de largura
+As tolerâncias são de +/- 1,5 mm em todas as dimensões.
+"} 
 ]}
