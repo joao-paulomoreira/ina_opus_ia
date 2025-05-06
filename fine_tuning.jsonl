@@ -26,7 +26,7 @@
         "content": "Não. Medicamentos da Cadeia do Frio são medicamentos que precisam ser armazenados em temperatura controlada de 2 a 8ºC. Hoje não temos disponível nenhum modelo de dispensário com refrigeração e controle de temperatura."
       }
 ]}
-  {"messages": [
+{"messages": [
       {
         "role": "system",
         "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."
@@ -40,7 +40,7 @@
         "content": "Os equipamentos da Opuspac precisam de 1 operador, no mínimo."
       }
 ]}
-  {"messages": [
+{"messages": [
       {
         "role": "system",
         "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."
@@ -54,7 +54,7 @@
         "content": "AIVAK PRO - Unitarização robótica de blisteres e ampolas.\nOPUS 30G - Embalagem de lotes e impressão em embalagens pré-confeccionadas.\nOPUS NINA - Embalagem de pequenos lotes."
       }
 ]}
-  {"messages": [
+{"messages": [
       {
         "role": "system",
         "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."
@@ -68,7 +68,7 @@
         "content": "Memória RAM: 8GB livres para a aplicação\nEspaço em disco: mínimo 128 GB livres (preferível SSD)\nProcessador: deve conter pelo menos 4 núcleos (Quad Core)\nSistema Operacional: Windows 10 Pro versão 2004 ou superior"
       }
 ]}
-  {"messages": [
+{"messages": [
       {
         "role": "system",
         "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."
@@ -83,7 +83,7 @@
       }
     ]
   }
-  {"messages": [
+{"messages": [
       {
         "role": "system",
         "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."
@@ -97,7 +97,7 @@
         "content": "Blister: 70 x 65 mm\nAmpola Pequena: 70 x 97 mm\nAmpola Grande ou Frasco: 70 x 130 mm\nKIT de vários produtos: 90 x 195 mm"
       }
     ]}
-  {"messages": [
+{"messages": [
       {
         "role": "system",
         "content": "Você é um assistente técnico da Opuspac. Responda com base nos, produtos e especificações da empresa, de forma objetiva."
