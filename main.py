@@ -9,6 +9,7 @@ import logging
 import time
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
+import json
 
 # Configuração de logs no arquivo app_log e no terminal
 logging.basicConfig(
@@ -38,8 +39,82 @@ def carregar_instrucoes_sistema():
         logging.error(f"Erro ao carregar instruções do sistema: {e}")
         return "Você é uma assistente da equipe comercial da Opuspac. Responda de maneira breve e resumida."
 
+# Função para iniciar o fine-tuning do modelo
+def iniciar_fine_tuning():
+    try:
+        # Verifica se o arquivo existe
+        jsonl_file = "fine_tuning.jsonl"
+        if not os.path.exists(jsonl_file):
+            logging.error(f"Arquivo JSONL não encontrado: {jsonl_file}")
+            return "Erro: Arquivo fine_tuning.jsonl não encontrado."
+        
+        # Faz o upload do arquivo para a API
+        logging.info(f"Iniciando upload do arquivo {jsonl_file}")
+        file_response = openai.File.create(
+            file=open(jsonl_file, "rb"),
+            purpose="fine-tune"
+        )
+        file_id = file_response.id
+        
+        # Inicia o fine-tuning usando o arquivo enviado
+        logging.info(f"Iniciando processo de fine-tuning com o arquivo {file_id}")
+        fine_tune_response = openai.FineTuningJob.create(
+            training_file=file_id,
+            model="gpt-4o-mini-2024-07-18"
+        )
+        
+        fine_tune_id = fine_tune_response.id
+        logging.info(f"Fine-tuning iniciado com sucesso. ID: {fine_tune_id}")
+        
+        # Salva o ID para consultas posteriores
+        with open("fine_tune_id.txt", "w") as f:
+            f.write(fine_tune_id)
+            
+        return f"Fine-tuning iniciado com sucesso! ID: {fine_tune_id}"
+    
+    except Exception as e:
+        logging.error(f"Erro ao iniciar fine-tuning: {e}")
+        return f"Erro ao iniciar fine-tuning: {str(e)}"
+
+# Função para verificar o status do fine-tuning
+def verificar_status_fine_tuning():
+    try:
+        # Tenta ler o ID do arquivo
+        if os.path.exists("fine_tune_id.txt"):
+            with open("fine_tune_id.txt", "r") as f:
+                fine_tune_id = f.read().strip()
+        else:
+            return "Nenhum fine-tuning encontrado. Inicie um fine-tuning primeiro."
+        
+        # Consulta o status na API
+        logging.info(f"Verificando status do fine-tuning: {fine_tune_id}")
+        response = openai.FineTuningJob.retrieve(fine_tune_id)
+        
+        # Formata a resposta para exibição
+        status = response.status
+        model = response.fine_tuned_model if response.fine_tuned_model else "Ainda não disponível"
+        
+        # Se o fine-tuning foi concluído, salva o modelo para uso
+        if status == "succeeded" and response.fine_tuned_model:
+            with open("fine_tuned_model.txt", "w") as f:
+                f.write(response.fine_tuned_model)
+        
+        return f"Status: {status}\nModelo Fine-tuned: {model}"
+    
+    except Exception as e:
+        logging.error(f"Erro ao verificar status: {e}")
+        return f"Erro ao verificar status: {str(e)}"
+
 # Processa a pergunta do e a maneira como será a resposta do modelo
 def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-18', temperatura=0, stream=True, max_tokens=900):
+    # Verifica se existe um modelo fine-tuned para usar
+    if os.path.exists("fine_tuned_model.txt"):
+        with open("fine_tuned_model.txt", "r") as f:
+            fine_tuned_model = f.read().strip()
+            if fine_tuned_model:
+                modelo = fine_tuned_model
+                logging.info(f"Usando modelo fine-tuned: {modelo}")
+    
     openai.api_key = openai_key
     
     start_time = time.time()
@@ -79,7 +154,6 @@ def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-1
         return response['choices'][0]['message']['content']
     
 # Carrega pastas com PDFs
-# OBS Optei por não seguir com arquivos PDFs, por isso não tem nenhum, um treinamento em txt é mais efetivo. Talvez sejam adicionados PDFs no futuro, mas no momento é apenas o treinamento em txt
 def carregar_pdfs(pasta):
     textos = {}
     try:
@@ -140,6 +214,17 @@ def pagina_principal():
     textos_pdf = carregar_pdfs('documents')
     
     st.header('Assistente Comercial', divider=True)
+    
+    # Adiciona botões de fine-tuning na sidebar
+    with st.sidebar:
+        st.header("Fine-Tuning")
+        if st.button("Iniciar Fine-Tuning"):
+            resultado = iniciar_fine_tuning()
+            st.info(resultado)
+            
+        if st.button("Verificar Status"):
+            status = verificar_status_fine_tuning()
+            st.info(status)
     
     if len(mensagens) == 0:
         mensagem_inicial = {'role': 'assistant', 'content': 'Me faça perguntas relacionadas as máquinas.'}
