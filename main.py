@@ -25,7 +25,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(log_file_path),
+        logging.FileHandler("app_log.log"),
         logging.StreamHandler()
     ]
 )
@@ -73,8 +73,7 @@ def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-1
         elapsed_time = time.time() - start_time
         processing_rate = f'Resposta processada com sucesso em {elapsed_time:.2f} segundos'
         
-        processing_log_path = os.path.join(os.path.dirname(log_file_path)), "processing_rate.txt"
-        with open(processing_log_path, "a") as txt_file:
+        with open("processing_rate.txt", "a") as txt_file:
             txt_file.write(processing_rate + "\n")
             
         logging.info(processing_rate)
