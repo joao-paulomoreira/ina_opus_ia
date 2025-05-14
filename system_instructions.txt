@@ -312,8 +312,7 @@ Possui um sistema semi-automático com 4 dimensões de discos resistentes a qued
 Possui sistema de detecção da ausência de medicamentos, interrompendo a operação imediatamente a máquina unitarizadora e indicando em um alarme
 Dimensional BLISTER
 
-Limite máximo dimensional de 18 x 25 mm
-Limite máximo diagonal de 30,8 mm
+Limite máximo dimensional de 18 x 30 mm
 Limite máximo de altura de 9,5 mm
 
 
@@ -377,7 +376,7 @@ Dimensional AMPOLA
 
 Limite Mínimo dimensional Ø 08 mm
 Limite máximo dimensional Ø 25 mm
-Limite máximo de altura 120 mm
+Limite máximo de altura de A = 120 mm
 
 
 Retirada dos produtos efetuada diretamente por compartimento removível sem tampa de 14 Litros
@@ -439,9 +438,9 @@ Ativação do modo automático do equipamento através de IHM de 7" touch screen
 Selagem unilateral com temperatura de 120°C a 135°C
 Dimensional BLISTER
 
-Limite máximo dimensional de 25 x 36 mm
-Limite máximo diagonal de 43,8 mm
+Limite máximo dimensional de 18,0 x 25,0 mm
 Limite máximo de altura de 9,5 mm
+Limite máximo diagonal de 30,8 mm
 
 
 Dimensional Ampolas pequenas
@@ -472,7 +471,7 @@ Não podemos garantir os resultados de funcionamento se todos os materiais Opus-
 
 PIK ONE
 Descrição
-PIK ONE: O equipamento PIKONE foi projetado para uso específico de dispensa de produtos médicos, o equipamento armazena os mais diversos tipos de produtos e através do Software SmartPick que permite uma conexão ao ERP do cliente gerando um melhor controle dos medicamentos. Possibilidade de configuração do planograma de acordo com a demanda de SKUs do cliente podendo utilizar a opção do equipamento BASE o qual poderá ser agregado a módulos AUXILIARES. A OPUSPAC não se responsabiliza por qualquer outro tipo de uso que não esteja nesta descrição, danificando o equipamento ou utilização de materiais não originais OPUSPAC, podendo gerar a perda de garantia do equipamento.
+PIK ONE: O equipamento PIKONE foi projetado para uso específico de dispensa de medicamentos, o equipamento armazena os mais diversos tipos de produtos e através do Software SmartPick que permite uma conexão ao ERP do cliente gerando um melhor controle dos medicamentos. Possibilidade de configuração do planograma de acordo com a demanda de SKUs do cliente podendo utilizar a opção do equipamento BASE o qual poderá ser agregado a módulos AUXILIARES. A OPUSPAC não se responsabiliza por qualquer outro tipo de uso que não esteja nesta descrição, danificando o equipamento ou utilização de materiais não originais OPUSPAC, podendo gerar a perda de garantia do equipamento.
 Especificações
 
 Dimensões (C x L x A): 0,85 x 1,70 x 1,86 m (2,70 m³)
@@ -550,7 +549,7 @@ Lista e armazenamento de Logs
 
 OPUS PICK
 Descrição
-OPUS PICK: O equipamento OPUSPICK foi projetado para uso específico de dispensa de produtos médicos, o equipamento armazena os mais diversos tipos de produtos e através do Software SmartPick que permite uma conexão ao ERP do cliente gerando um melhor controle dos medicamentos. Possibilidade de configuração do planograma de acordo com a demanda de SKUs do cliente podendo utilizar a opção do equipamento BASE o qual poderá ser agregado a módulos AUXILIARES. A OPUSPAC não se responsabiliza por qualquer outro tipo de uso que não esteja nesta descrição, danificando o equipamento ou utilização de materiais não originais OPUSPAC, podendo gerar a perda de garantia do equipamento.
+OPUS PICK: O equipamento OPUSPICK foi projetado para uso específico de dispensa de produtos médicos e medicamentos, o equipamento armazena os mais diversos tipos de produtos e através do Software SmartPick que permite uma conexão ao ERP do cliente gerando um melhor controle dos medicamentos. Possibilidade de configuração do planograma de acordo com a demanda de SKUs do cliente podendo utilizar a opção do equipamento BASE o qual poderá ser agregado a módulos AUXILIARES. A OPUSPAC não se responsabiliza por qualquer outro tipo de uso que não esteja nesta descrição, danificando o equipamento ou utilização de materiais não originais OPUSPAC, podendo gerar a perda de garantia do equipamento.
 Especificações
 
 Dimensões (L x C x A): 0,60 x 0,68 x 1,75 m (0,71 m³)
