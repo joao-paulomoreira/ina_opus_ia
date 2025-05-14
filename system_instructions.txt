@@ -34,7 +34,7 @@ Descrição
 AIVAK PRO. O equipamento AIVAK PRO tem como principal função a unitarização robótica de blisteres com sistema de corte preciso e processo de embalagem integrado. Também possui a função de embalagens de blisteres pré cortados e ampolas de forma semi-automática.
 Especificações
 
-Produtividade de até 1200 unidades por hora.
+Produtividade de até 1200 unidades por hora (Blister).
 A produtividade do equipamento é variável em virtude do tipo e tamanho do item a ser embalado, para alimentação manual, ou com o opcional de alimentador de ampolas.
 Dimensões (C x L x A): 0,76 x 1,40 x 1,70 m (1,06 m²)
 Dimensões totais do equipamento.
@@ -80,30 +80,54 @@ Capacidade de armazenamento de até 1000 parametrização
 Possui sistema detecção da ausência de medicamentos, interrompendo a operação imediatamente a máquina unitarizadora e indicando um alarme
 
 
-Dimensional BLISTER
+Dimensional do Blister:
 
-Limite máximo dimensional de 25 x 33 mm
-Limite máximo de altura do blister 10,0 mm
-Limite mínimo de altura do blister 3,0 mm
+Limite máximo dimensional blister de 18,0 x 25,0 mm
+Limite máximo de altura do blister de 9,5 mm
+Limite mínimo de altura blister de 3,0 mm
 
+Dimensional da Cartela:
+
+Dimensional mínimo de cartela (L x C) 33 x 68 mm
+Dimensional máximo de cartela (L x C)100 x 135 mm
+
+Distanciamento dos Blisters:
+
+Distância mínima necessária de 2,5 mm entre os blísteres independente do desenho construtivo
+Dimensional da Aba da Cartela:
+
+A distância da borda da cartela ao blister deve ser no mínimo de 3,5 mm
+
+Ângulo do Blister:
+
+Possibilidade de cortes com orientação do blister a  45 graus
+Possibilidade de cortes com orientação do blister a  90 graus
+
+Espessura da Cartela:
+
+A espessura mínima de cartela é 0,17mm
+
+Tipos de Cartelas:
+
+Corte de cartelas plásticas transparentes e coloridas;
+
+     *Material da cartela em PVC ou PET mais alumínio.
+
+Corte de cartelas de alumínio;
+
+    *Material da cartela em alumínio / alumínio.
+
+Cartelas picotadas.
+
+     *Material da cartela em PVC ou PET mais alumínio.
 
 Dimensional AMPOLA
 
-Limite máximo dimensional ø 25 mm
-Limite máximo de altura 90 mm
+Limite máximo dimensional de 18,0 x 30,0 mm
+Limite máximo de altura de 9,5 mm
 
-
-Dimensional FLACONETE
-
-Limite máximo dimensional de 22 x 12 mm
-Limite máximo de altura 90 mm
-
-
-Dimensional Cartela
-
-Dimensional mínimo de cartela (L x C) 33 x 68 mm
-Dimensional máximo de cartela (L x C) 100 x 135 mm
-
+Limite máximo dimensional de Ø 18,5 mm
+Limite máximo de altura de 90 mm
 
 Distanciamento Aba Cartela
 
