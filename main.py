@@ -10,16 +10,6 @@ import time
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
 
-# Cria um diretório temporário para guardar os logs
-def get_log_path(): 
-    if os.environ.get('STREAMLIT_SHARING') or os.environ.get('IS_STREAMLIT_CLOUD'):
-        log_dir = "/tmp"
-    else: 
-        log_dir = os.path.dirname(os.path.abspath(__file__))
-        
-    return os.path.join(log_dir, "app_log.log")
-log_file_path = get_log_path()
-
 # Configuração de logs no arquivo app_log e no terminal
 logging.basicConfig(
     level=logging.INFO,
