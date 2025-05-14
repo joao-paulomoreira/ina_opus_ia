@@ -356,7 +356,7 @@ Dimensões (C x L x A): 0,67 x 0,91 x 1,62 m (0,99 m²)
 Dimensões do equipamento.
 Área de operação (C x L): 1,66 x 1,61 m
 Recomendamos que a área de operação tenha no mínimo de 0,7 mts em sua frente..O equipamento possui a manutenção na parte traseira e lateral, onde recomendamos que ele esteja em uma área com possibilidade de movimentação de 0,7 mts para realização de sua manutenção. O equipamento possui o abastecimento de insumos na lateral esquerda, portanto recomendamos um corredor livre de 0,7 mts.
-Peso: 185 kg (295,9 kg/m²)
+Peso: 205 kg (336 kg/m²)
 O peso informado é composto pelo peso do equipamento com os discos e caixas de saída.
 Alimentação (Voltagem, tensão elétrica): 220 Volts
 Utilização do conector padrão com aterramento para 10 amperes
