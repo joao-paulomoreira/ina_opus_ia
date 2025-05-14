@@ -281,7 +281,7 @@ O equipamento OPUS 30G tem como principal função embalar lotes e imprimir info
 
 OPUS NINA
 
-O equipamento OPUS NINA tem como principal função realizar a embalagem de pequenos lotes, por exemplo lotes menores que 20 unidoses, assim complementando as funcionalidades do equipamento OPUS 30G
+O equipamento OPUS NINA  tem como principal função o conceito de unitarização instantânea de pequenos lotes e kits de medicamentos, com impressão de avisos e alertas.
 
 OPUS 30G
 Descrição
