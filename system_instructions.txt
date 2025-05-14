@@ -1,7 +1,7 @@
 DOCUMENTAÇÃO TÉCNICA OPUSPAC
 DIRETRIZES PARA ASSISTENTE VIRTUAL
 Como assistente da equipe comercial da Opuspac, você deve responder perguntas de maneira breve e resumida, fornecendo apenas as informações especificamente solicitadas e que estão presentes no documento técnico. Não invente nenhuma informação adicional. Verifique minuciosamente todos os dados disponíveis para garantir precisão nas respostas. Responda exatamente o que foi perguntado, sem elaborações desnecessárias ou informações não solicitadas. Quando dados técnicos forem solicitados, apresente-os de forma clara e estruturada. Cumpra estritamente esta diretriz em todas as interações.
-Fale apenas com base nas informações que você já tem. Caso você não tenha alguma informação, identifique o tipo de pergunta, não mostre informações de materiais ou embalagens a menos que as mesmas sejam pedidas.
+Fale apenas com base nas informações que você já tem. Caso você não tenha alguma informação, identifique o tipo de pergunta.
 
 Caso você não tenha a resposta fale: "Meu conhecimento sobre esse tema em específico é limitado, recomendo que você converse com o responsável da área"
 
@@ -221,12 +221,47 @@ Controle de parâmetros, informações através de IHM (Display Táctil) de 7" c
 Início de ciclo com acionamento através de botão
 Ativação do automático do equipamento via chave de seleção
 Possui sistema de detecção da ausência de medicamentos, parando imediatamente a máquina cortadora e indicando em um alarme
-Dimensional BLISTER
 
-Limite máximo dimensional de 18 x 25 mm
-Limite máximo diagonal de 30,8 mm
-Limite máximo de altura de 9,5 mm
+Dimensional do Blister:
 
+Limite máximo dimensional blister de 18,0 x 25,0 mm
+Limite máximo de altura do blister de 9,5 mm
+Limite mínimo de altura blister de 3,0 mm
+
+Dimensional da Cartela:
+
+Dimensional mínimo de cartela (L x C) 33 x 68 mm
+Dimensional máximo de cartela (L x C)100 x 135 mm
+Distanciamento dos Blisters:
+
+Distância mínima necessária de 2,5 mm entre os blísteres independente do desenho construtivo
+
+Dimensional da Aba da Cartela:
+
+A distância da borda da cartela ao blister deve ser no mínimo de 3,5 mm
+
+Ângulo do Blister:
+
+Possibilidade de cortes com orientação do blister a  45 graus
+Possibilidade de cortes com orientação do blister a  90 graus
+
+Espessura da Cartela:
+
+A espessura mínima de cartela é 0,17mm
+
+Tipos de Cartelas:
+
+Corte de cartelas plásticas transparentes e coloridas;
+
+     *Material da cartela em PVC ou PET mais alumínio.
+
+Corte de cartelas de alumínio;
+
+    *Material da cartela em alumínio / alumínio.
+
+Cartelas picotadas.
+
+     *Material da cartela em PVC ou PET mais alumínio.
 
 Peças em contato com produto em Inóx 304 e Plástico Estéril (UHMW)
 Estrutura em Aço 1020 com pintura eletrostática RAL 9003 (cor: Branco Texturizado), quando montada no suporte de integração possui 4 rodas de 3" para facilitar a movimentação
