@@ -471,7 +471,7 @@ Não podemos garantir os resultados de funcionamento se todos os materiais Opus-
 
 PIK ONE
 Descrição
-PIK ONE: O equipamento PIKONE foi projetado para uso específico de dispensa de medicamentos, o equipamento armazena os mais diversos tipos de produtos e através do Software SmartPick que permite uma conexão ao ERP do cliente gerando um melhor controle dos medicamentos. Possibilidade de configuração do planograma de acordo com a demanda de SKUs do cliente podendo utilizar a opção do equipamento BASE o qual poderá ser agregado a módulos AUXILIARES. A OPUSPAC não se responsabiliza por qualquer outro tipo de uso que não esteja nesta descrição, danificando o equipamento ou utilização de materiais não originais OPUSPAC, podendo gerar a perda de garantia do equipamento.
+PIK ONE: O equipamento PIKONE foi projetado para uso específico de dispensação de medicamentos, o equipamento armazena os mais diversos tipos de produtos e através do Software SmartPick que permite uma conexão ao ERP do cliente gerando um melhor controle dos medicamentos. Possibilidade de configuração do planograma de acordo com a demanda de SKUs do cliente podendo utilizar a opção do equipamento BASE o qual poderá ser agregado a módulos AUXILIARES. A OPUSPAC não se responsabiliza por qualquer outro tipo de uso que não esteja nesta descrição, danificando o equipamento ou utilização de materiais não originais OPUSPAC, podendo gerar a perda de garantia do equipamento.
 Especificações
 
 Dimensões (C x L x A): 0,85 x 1,70 x 1,86 m (2,70 m³)
