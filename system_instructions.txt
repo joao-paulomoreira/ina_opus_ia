@@ -1194,23 +1194,6 @@ Resposta esperada: As bobinas fornecidas pela Opuspac têm as seguintes dimensõ
 65 mm, 97 mm, 130 mm, 195 mm, 70 mm ou 90 mm de largura
 As tolerâncias são de +/- 1,5 mm em todas as dimensões.
 
-
-Pergunta: Quais sãos as medidas de bobinas usadas na Opus 30G?
-Resposta esperada: Blister: 70 x 65 mm
-Ampola Pequena: 70 x 97 mm
-Ampola Grande ou Frasco: 70 x 130 mm
-KIT de vários produtos: 90 x 195 mm
-
-
-Pergunta: Quais sãos as dimensões usadas de embalagens no equipamento Opus 30G?
-Resposta esperada: As dimensões usadas de embalagens no equipamento OPUS 30G são:
-
-Blister: 70 x 65 mm
-Ampola Pequena: 70 x 97 mm
-Ampola Grande ou Frasco: 70 x 130 mm
-KIT de vários produtos: 90 x 195 mm
-
-
 Pergunta: Quantos pontos de corte são possíveis de mapear no Easy Cut?
 Resposta esperada: O software EasyCut permite mapear até 60 pontos de corte.
 
