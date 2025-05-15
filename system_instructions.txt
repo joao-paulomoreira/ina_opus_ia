@@ -913,6 +913,43 @@ Cadastro e gerenciamento de posições para produtos
 Leitura de códigos de barras por câmera no tablet
 Visualização e confirmação de impressão de etiquetas
 
+Informações sobre integração
+
+Atualização do Estoque
+no dispensário
+
+A nossa API atualiza
+automaticamente o
+estoque no dispensário
+após a separação ser
+encerradada entrega.
+Estoque sempre
+atualizado, evitando
+rupturas e excesso de
+estoque.
+
+Beneficios da Integração
+
+· Automatização: Reduz a intervenção manual, diminuindo erros.
+· Eficiência: Acelera todo o processo de dispensação de medicamentos.
+· Precisão: Garante que os pacientes recebam os medicamentos corretos na
+quantidade certa.
+· Controle de Estoque: Mantém o estoque sempre atualizado, evitando
+problemas de falta ou excesso de medicamentos.
+· Satisfação do Paciente: O processo mais rápido e preciso resulta em maior
+satisfação dos pacientes.
+
+Retorno da
+Informação ao ERP
+
+Toda a informação sobre a
+prescrição e a entrega é enviada
+de volta ao ERP do hospital.
+O hospital tem um registro
+completo e atualizado de todas
+as operações, facilitando a
+auditoria e o controle.
+
 MATERIAIS
 Material BOPP com Biodegradação Acelerada
 A Opus Packaging oferece um material de embalagem biodegradável especializado para aplicações farmacêuticas. Este filme de polipropileno de dupla face, disponível em versões transparente ou branco perolizado, pode ser selado a quente em ambos os lados, com uma temperatura inicial de selagem de 105°C no lado não tratado. O material possui tratamento externo para impressão e/ou laminação.
