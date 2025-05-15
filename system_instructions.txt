@@ -12,6 +12,7 @@ BC200
 OPUS FLAG
 OPUS NINA
 PIK ONE
+PIK ONE MINI
 OPUS PICK
 OPUS INK
 OPUS 30G
@@ -534,6 +535,22 @@ Função de descarte e devolução com justificativas selecionáveis
 Associação de leitos x usuários
 Interface do usuários com filtros para visualização de dados
 Lista e armazenamento de Logs
+
+PIK ONE MINI
+Descrição
+O equipamento PIKONE foi projetado para uso específico de dispensa de produtos médicos, o equipamento armazena os mais diversos tipos de produtos e através do Software SmartPick  que permite uma conexão ao ERP do cliente gerando um melhor controle dos medicamentos.
+
+Características:
+Peso: 220 Kg
+Tensão de Funcionamento: 127/220V
+Frequência: 50/60Hz
+Potência Ativa: 660 W
+Corrente Nominal: 3 A
+
+Dimensões:
+Largura 	 = 680mm
+Profundidade	 = 850 mm
+Altura 		 = 1860 mm
 
 OPUS PICK
 Descrição
