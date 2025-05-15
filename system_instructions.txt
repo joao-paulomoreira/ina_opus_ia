@@ -80,7 +80,7 @@ Capacidade de armazenamento de até 1000 parametrização
 Possui sistema detecção da ausência de medicamentos, interrompendo a operação imediatamente a máquina unitarizadora e indicando um alarme
 
 
-Dimensional do Blister:
+Dimensional do Blister para o corte:
 
 Limite máximo dimensional blister de 18,0 x 25,0 mm
 Limite máximo de altura do blister de 9,5 mm
@@ -222,7 +222,7 @@ Início de ciclo com acionamento através de botão
 Ativação do automático do equipamento via chave de seleção
 Possui sistema de detecção da ausência de medicamentos, parando imediatamente a máquina cortadora e indicando em um alarme
 
-Dimensional do Blister:
+Dimensional do Blister para o corte:
 
 Limite máximo dimensional blister de 18,0 x 25,0 mm
 Limite máximo de altura do blister de 9,5 mm
@@ -436,23 +436,11 @@ Controle de parâmetros, funções e viabiliza as informações através de Tela
 Início de ciclo com acionamento através de botão para acionamento de ciclo
 Ativação do modo automático do equipamento através de IHM de 7" touch screen
 Selagem unilateral com temperatura de 120°C a 135°C
-Dimensional BLISTER
 
-Limite máximo dimensional de 18,0 x 25,0 mm
-Limite máximo de altura de 9,5 mm
-Limite máximo diagonal de 30,8 mm
-
-
-Dimensional Ampolas pequenas
-
-Limite máximo dimensional Ø 18,5 mm
-Limite máximo de altura 90 mm
-
-
-Dimensional FLACONETE/ Ampolas Grandes
-
-Limite máximo dimensional de 22 x 12 mm
-Limite máximo de altura 90 mm
+Dimensões de embalagem Nina 70 x 70 mm (para blísteres)
+     70 x 100 mm (para ampolas pequenas)
+     70 x 140 mm (para ampolas grandes e frascos)
+     140 x 230 mm (para kits maiores com produtos diversos)
 
 
 Após seladas as embalagens possuem um sistema que permite destacá-las facilmente uma das outras
