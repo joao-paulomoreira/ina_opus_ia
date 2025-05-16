@@ -9,6 +9,7 @@ import logging
 import time
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
+from github_logger import GithunLogHandler
 
 st.markdown("""
             <style>
@@ -47,7 +48,7 @@ def carregar_instrucoes_sistema():
         return "Você é uma assistente da equipe comercial da Opuspac. Responda de maneira breve e resumida."
 
 # Processa a pergunta do e a maneira como será a resposta do modelo
-def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-18', temperatura=0, stream=True, max_tokens=900):
+def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-18', temperatura=0.2, stream=True, max_tokens=900):
     openai.api_key = openai_key
     
     start_time = time.time()
