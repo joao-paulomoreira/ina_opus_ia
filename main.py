@@ -10,166 +10,42 @@ import time
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
 
-st.set_page_config(
-    page_title="Assistente Comercial",
-    page_icon="🤖",
-    layout="wide",
-    initial_sidebar_state="collapsed",
-    menu_items=None
-)
-
-# CSS super agressivo para remover todos os elementos indesejados
-st.markdown("""
-    <style>
-    /* Remoção completa do footer */
-    footer {display: none !important;}
-    footer::after {display: none !important;}
-    
-    /* Remover absolutamente qualquer botão de perfil */
-    .viewerBadge, .stDeployButton, div[data-testid="stToolbar"], div[data-testid="stDecoration"],
-    div[data-testid="stStatusWidget"], .stTooltipIcon, img[alt="Streamlit logo"] {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        width: 0 !important;
-        height: 0 !important;
-        position: absolute !important;
-        top: -9999px !important;
-        left: -9999px !important;
-        z-index: -9999 !important;
-        pointer-events: none !important;
-    }
-    
-    /* Remover todo e qualquer link para streamlit.io */
-    a[href*="streamlit.io"], a[href*="streamlit.app"], div:has(> a[href*="streamlit.io"]),
-    div:has(> a[href*="streamlit.app"]), span:has(> a[href*="streamlit"]), p:has(> a[href*="streamlit"]) {
-        display: none !important;
-        visibility: hidden !important;
-    }
-    
-    /* Remover todos os elementos fixos no canto inferior direito */
-    div[style*="position: fixed"][style*="bottom"], div[style*="position: absolute"][style*="bottom"],
-    div[style*="position: fixed"][style*="right"], div[style*="position: absolute"][style*="right"],
-    div:has(> a[href*="github"]), a[href*="github"], a[target="_blank"] {
-        display: none !important;
-        visibility: hidden !important;
-    }
-    
-    /* Cobrir o canto inferior direito com um bloco da mesma cor */
-    body::after {
-        content: '';
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        width: 150px;
-        height: 70px;
-        background-color: #0e1117; /* cor de fundo igual à do Streamlit dark mode */
-        z-index: 9999 !important;
-    }
-    
-    /* Cobrir a barra superior direita com um bloco da mesma cor */
-    body::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 200px;
-        height: 50px;
-        background-color: #0e1117; /* cor de fundo igual à do Streamlit dark mode */
-        z-index: 9999 !important;
-    }
-    
-    /* Remover todos os scripts externos */
-    script[src*="streamlit"], link[href*="streamlit"] {
-        display: none !important;
-    }
-    
-    /* Esconde todos os elementos que contenham 'streamlit' em qualquer atributo */
-    [class*="streamlit"], [id*="streamlit"], [data-*="streamlit"], 
-    [aria-*="streamlit"], [name*="streamlit"] {
-        display: none !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-# JavaScript ultra agressivo para remover elementos
+# Adicionar JavaScript para remover elementos após o carregamento
 st.markdown("""
     <script>
-        // Função para remover TODOS os elementos indesejados
-        function nukeUnwantedElements() {
-            // Arrays de termos a procurar
-            const terms = ['streamlit', 'github', 'profile', 'avatar', 'footer', 'badge', 'hosted'];
+        // Função para remover elementos
+        function removeElements() {
+            // Remover elementos "Hosted by Streamlit"
+            document.querySelectorAll('a[href*="streamlit.io"]').forEach(el => {
+                if (el.closest('div')) {
+                    el.closest('div').style.display = 'none';
+                }
+                el.style.display = 'none';
+            });
             
-            // Remover links
-            document.querySelectorAll('a').forEach(el => {
-                if (el.href && terms.some(term => el.href.toLowerCase().includes(term))) {
-                    if (el.parentNode) {
-                        el.parentNode.removeChild(el);
-                    }
+            // Remover avatar de perfil (botão com imagem no canto inferior)
+            document.querySelectorAll('footer button').forEach(el => {
+                if (el.querySelector('img')) {
+                    el.style.display = 'none';
                 }
             });
             
-            // Remover imagens
-            document.querySelectorAll('img').forEach(el => {
-                if (el.parentNode && (
-                    el.alt && terms.some(term => el.alt.toLowerCase().includes(term)) ||
-                    el.src && terms.some(term => el.src.toLowerCase().includes(term))
-                )) {
-                    el.parentNode.removeChild(el);
-                }
-            });
-            
-            // Remover botões
-            document.querySelectorAll('button').forEach(el => {
-                if (el.parentNode && (
-                    el.textContent && terms.some(term => el.textContent.toLowerCase().includes(term)) ||
-                    el.className && terms.some(term => el.className.toLowerCase().includes(term))
-                )) {
-                    el.parentNode.removeChild(el);
-                }
-            });
-            
-            // Remover elementos fixos no canto inferior
-            document.querySelectorAll('div').forEach(el => {
-                const style = window.getComputedStyle(el);
-                if (style.position === 'fixed' || style.position === 'absolute') {
-                    if ((style.bottom === '0px' || parseInt(style.bottom) < 100) && 
-                        (style.right === '0px' || parseInt(style.right) < 100)) {
-                        if (el.parentNode) {
-                            el.parentNode.removeChild(el);
-                        }
-                    }
-                }
-            });
-            
-            // Remover footer especificamente
-            document.querySelectorAll('footer').forEach(el => {
-                if (el.parentNode) {
-                    el.parentNode.removeChild(el);
+            // Procura por divs fixos no canto inferior direito
+            document.querySelectorAll('div[style*="position: fixed"]').forEach(el => {
+                if (el.style.bottom === '0px' && el.style.right === '0px') {
+                    el.style.display = 'none';
                 }
             });
         }
         
-        // Executar imediatamente, após carregamento e em intervalos
-        nukeUnwantedElements();
-        window.addEventListener('load', nukeUnwantedElements);
+        // Executar imediatamente e também após o carregamento completo
+        removeElements();
+        window.addEventListener('load', removeElements);
         
-        // Executar a cada segundo por 10 segundos para garantir
-        for (let i = 1; i <= 10; i++) {
-            setTimeout(nukeUnwantedElements, i * 1000);
-        }
+        // Executar novamente após um tempo (para elementos carregados dinamicamente)
+        setTimeout(removeElements, 1000);
+        setTimeout(removeElements, 3000);
     </script>
-    """, unsafe_allow_html=True)
-
-# Injetar uma técnica extrema: iframe sobreposto para esconder os elementos
-st.markdown("""
-    <div style="position: fixed; bottom: 0; right: 0; z-index: 9999; width: 200px; height: 80px; overflow: hidden;">
-        <iframe src="about:blank" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; background-color: #0e1117;"></iframe>
-    </div>
-    
-    <div style="position: fixed; top: 0; right: 0; z-index: 9999; width: 250px; height: 60px; overflow: hidden;">
-        <iframe src="about:blank" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; background-color: #0e1117;"></iframe>
-    </div>
     """, unsafe_allow_html=True)
 
 # Configuração de logs no arquivo app_log e no terminal
