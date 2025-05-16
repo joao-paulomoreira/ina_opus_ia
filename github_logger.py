@@ -90,7 +90,7 @@ class GithunLogHandler:
                 api_url, 
                 headers=headers, 
                 data=json.dumps(commit_data)
-            )
+                )
                 
                 if response.status_code in [201, 200]:
                     self.logger.info(f"Logs enviados com sucesso para: {log_path}")
