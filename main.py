@@ -11,14 +11,26 @@ from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
 
 
-hide_badge_generic = """
-    <style>
-    div[class*="viewerBadge"] {
-        display: none !important;
-    }
-    </style>
-"""
-st.markdown(hide_badge_generic, unsafe_allow_html=True)
+import streamlit as st
+import streamlit.components.v1 as components
+
+components.html(
+    """
+    <script>
+    const hideBadge = () => {
+        const badge = document.querySelector('[class*="viewerBadge"], [class*="stDeployButton"]');
+        if (badge) {
+            badge.style.display = "none";
+        }
+    };
+    const observer = new MutationObserver(hideBadge);
+    observer.observe(document.body, { childList: true, subtree: true });
+    hideBadge();
+    </script>
+    """,
+    height=0,
+)
+
 
 # Configuração de logs no arquivo app_log e no terminal
 logging.basicConfig(
