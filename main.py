@@ -14,7 +14,7 @@ from dotenv import load_dotenv, find_dotenv
 hide_elements = """
     <style>
 _container_gzau3_1 _viewerBadge_nim44_23{
-    display: none;
+    display: none !important;
 }
     </style>
 """
