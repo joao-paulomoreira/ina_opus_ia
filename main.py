@@ -12,12 +12,18 @@ from dotenv import load_dotenv, find_dotenv
 
 st.markdown("""
     <style>
-        ._profilePreview_gzau3_63{
-            display: none !important;
-        }
-        ._link_gzau3_10{
-            display: none;
-        }
+._profilePreview_gzau3_63 {
+    display: none !important;
+
+    align-items: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 1.25rem;
+    padding-right: 1.75rem;
+    gap: .5rem;
+    border-top-left-radius: .5rem;
+    transition: transform .3sease-in-out;
+}
     </style>
     """, unsafe_allow_html=True)
 
