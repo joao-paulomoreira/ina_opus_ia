@@ -16,7 +16,7 @@ st.markdown("""
                     padding: 1rem 1rem 4.5rem;
                 }
             </style>
-            """)
+            """, unsafe_allow_html=True)
 
 # Configuração de logs no arquivo app_log e no terminal
 logging.basicConfig(
