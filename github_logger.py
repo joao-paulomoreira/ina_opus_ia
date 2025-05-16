@@ -86,8 +86,19 @@ class GithunLogHandler:
                     "Accept": "application/vnd.github.v3+json"
                 }
                 
-                reponse = requests.put(
-                    api_url,
-                    headers=headers,
-                    data=json=.dumps(commit_data)
-                )
+                response = requests.put(
+                api_url, 
+                headers=headers, 
+                data=json.dumps(commit_data)
+            )
+                
+                if response.status_code in [201, 200]:
+                    self.logger.info(f"Logs enviados com sucesso para: {log_path}")
+                    return True
+                else:
+                    self.logger.error(f"Falha ao enviar logs:{response.status_code} - {response.text}")
+                    return False
+                
+            except Exception as e:
+                self.logger.erro(f"Erro ao fazer commit o dos logs: {str(e)}")
+                return False
