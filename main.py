@@ -10,43 +10,15 @@ import time
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
 
-# Adicionar JavaScript para remover elementos após o carregamento
-st.markdown("""
-    <script>
-        // Função para remover elementos
-        function removeElements() {
-            // Remover elementos "Hosted by Streamlit"
-            document.querySelectorAll('a[href*="streamlit.io"]').forEach(el => {
-                if (el.closest('div')) {
-                    el.closest('div').style.display = 'none';
-                }
-                el.style.display = 'none';
-            });
-            
-            // Remover avatar de perfil (botão com imagem no canto inferior)
-            document.querySelectorAll('footer button').forEach(el => {
-                if (el.querySelector('img')) {
-                    el.style.display = 'none';
-                }
-            });
-            
-            // Procura por divs fixos no canto inferior direito
-            document.querySelectorAll('div[style*="position: fixed"]').forEach(el => {
-                if (el.style.bottom === '0px' && el.style.right === '0px') {
-                    el.style.display = 'none';
-                }
-            });
-        }
-        
-        // Executar imediatamente e também após o carregamento completo
-        removeElements();
-        window.addEventListener('load', removeElements);
-        
-        // Executar novamente após um tempo (para elementos carregados dinamicamente)
-        setTimeout(removeElements, 1000);
-        setTimeout(removeElements, 3000);
-    </script>
-    """, unsafe_allow_html=True)
+hide_streamlit_style = """
+    <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        .stDeployButton {display: none;}
+        .viewerBadge_container__1QSob {display: none;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # Configuração de logs no arquivo app_log e no terminal
 logging.basicConfig(
