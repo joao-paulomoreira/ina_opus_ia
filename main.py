@@ -13,7 +13,7 @@ from dotenv import load_dotenv, find_dotenv
 st.markdown("""
             <style>
                 .st-emotion-cache-6shykm{
-                    padding: 1rem 1rem 4.5rem;
+                    padding: 1rem 1rem 5.5rem;
                 }
             </style>
             """, unsafe_allow_html=True)
