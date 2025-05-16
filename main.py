@@ -10,15 +10,24 @@ import time
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
 
-hide_streamlit_style = """
+
+hide_elements = """
     <style>
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        ._profileContainer_gzau3_53 {display: none;}
-        .viewerBadge_container__1QSob {display: none;}
+    /* Esconde o botão de deploy e o avatar do usuário */
+    [data-testid="stDeployButton"], 
+    .viewerBadge_container__1QSob, 
+    .viewerBadge_link__1S137,
+    .css-1q8dd3e { 
+        display: none !important; 
+    }
+
+    /* Esconde qualquer botão flutuante no canto inferior direito */
+    div[class^='st-emotion-cache'] > div[style*='position: fixed'][style*='bottom'] {
+        display: none !important;
+    }
     </style>
 """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+st.markdown(hide_elements, unsafe_allow_html=True)
 
 # Configuração de logs no arquivo app_log e no terminal
 logging.basicConfig(
