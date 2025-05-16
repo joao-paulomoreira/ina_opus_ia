@@ -14,7 +14,7 @@ hide_streamlit_style = """
     <style>
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
-        .stDeployButton {display: none;}
+        ._profileContainer_gzau3_53 {display: none;}
         .viewerBadge_container__1QSob {display: none;}
     </style>
 """
