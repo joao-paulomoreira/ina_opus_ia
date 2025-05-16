@@ -10,6 +10,12 @@ import time
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
 
+st.set_page_config(
+    page_title="Assistente Comercial",
+    page_icon="🤖",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
 
 st.markdown("""
     <style>
