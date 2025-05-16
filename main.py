@@ -10,41 +10,15 @@ import time
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
 
-st.set_page_config(
-    page_title="Assistente Comercial",
-    page_icon="🤖",
-    layout="wide",
-    initial_sidebar_state="collapsed"
-)
 
-st.markdown("""
+hide_elements = """
     <style>
-    /* Remover o elemento específico usando a classe que você identificou */
-    ._link_gzau3_10 {
-        display: none !important;
-        visibility: hidden !important;
-    }
-    
-    /* Classes relacionadas que podem estar aninhadas */
-    [class*="_link_gzau3"] {
-        display: none !important;
-        visibility: hidden !important;
-    }
-    
-    /* Elementos comuns do Streamlit para esconder */
-    footer {visibility: hidden !important;}
-    #MainMenu {visibility: hidden !important;}
-    [data-testid="stToolbar"] {visibility: hidden !important;}
-    [data-testid="baseButton-headerNoPadding"] {visibility: hidden !important;}
-    
-    /* Esconder elementos que contenham "streamlit" no href */
-    a[href*="streamlit.io"], 
-    div:has(> a[href*="streamlit.io"]) {
-        display: none !important;
-        visibility: hidden !important;
-    }
+._container_gzau3_1 _viewerBadge_nim44_23{
+    display: none !important;
+}
     </style>
-    """, unsafe_allow_html=True)
+"""
+st.markdown(hide_elements, unsafe_allow_html=True)
 
 # Configuração de logs no arquivo app_log e no terminal
 logging.basicConfig(
