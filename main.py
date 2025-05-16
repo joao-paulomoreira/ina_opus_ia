@@ -10,6 +10,32 @@ import time
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
 
+st.markdown("""
+    <style>
+    /* Oculta a foto do usuário */
+    [data-testid="stImage"] {display: none;}
+    [data-testid="baseButton-headerNoPadding"] {display: none;}
+    
+    /* Oculta o botão da coroa do Streamlit */
+    [data-testid="stToolbar"] {display: none;}
+    
+    /* Remove outros elementos da interface de usuário do Streamlit */
+    #MainMenu {visibility: hidden;}
+    header {visibility: hidden;}
+    footer {visibility: hidden;}
+    
+    /* Ajusta o container principal para uma experiência de tela cheia */
+    [data-testid="stAppViewContainer"] {
+        padding-top: 0rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+    
+    /* Esconde a área de avatar e botões */
+    .stActionButton {display: none;}
+    </style>
+    """, unsafe_allow_html=True)
+
 # Configuração de logs no arquivo app_log e no terminal
 logging.basicConfig(
     level=logging.INFO,
