@@ -11,14 +11,14 @@ from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
 
 
-hide_elements = """
+hide_badge_generic = """
     <style>
-._container_gzau3_1 _viewerBadge_nim44_23{
-    display: none !important;
-}
+    div[class*="viewerBadge"] {
+        display: none !important;
+    }
     </style>
 """
-st.markdown(hide_elements, unsafe_allow_html=True)
+st.markdown(hide_badge_generic, unsafe_allow_html=True)
 
 # Configuração de logs no arquivo app_log e no terminal
 logging.basicConfig(
