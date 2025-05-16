@@ -10,6 +10,13 @@ import time
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
 
+st.markdown("""
+            <style>
+                .st-emotion-cache-6shykm{
+                    padding: 1rem 1rem 4.5rem;
+                }
+            </style>
+            """)
 
 # Configuração de logs no arquivo app_log e no terminal
 logging.basicConfig(
