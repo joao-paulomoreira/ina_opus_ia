@@ -13,18 +13,9 @@ from dotenv import load_dotenv, find_dotenv
 
 hide_elements = """
     <style>
-    /* Esconde o botão de deploy e o avatar do usuário */
-    [data-testid="stDeployButton"], 
-    .viewerBadge_container__1QSob, 
-    .viewerBadge_link__1S137,
-    .css-1q8dd3e { 
-        display: none !important; 
-    }
-
-    /* Esconde qualquer botão flutuante no canto inferior direito */
-    div[class^='st-emotion-cache'] > div[style*='position: fixed'][style*='bottom'] {
-        display: none !important;
-    }
+_container_gzau3_1 _viewerBadge_nim44_23{
+    display: none;
+}
     </style>
 """
 st.markdown(hide_elements, unsafe_allow_html=True)
