@@ -9,7 +9,6 @@ import logging
 import time
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
-from github_logger import GithunLogHandler
 
 st.markdown("""
             <style>
