@@ -5,10 +5,15 @@ import streamlit as st
 import openai
 import os
 import fitz
-import logging
 import time
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
+
+# Importar logger simples
+from simple_logger import get_logger
+
+# Configurar logger
+logger = get_logger()
 
 st.markdown("""
             <style>
@@ -18,22 +23,16 @@ st.markdown("""
             </style>
             """, unsafe_allow_html=True)
 
-# Configuração de logs no arquivo app_log e no terminal
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("app_log.log"),
-        logging.StreamHandler()
-    ]
-)
+logger.info("Aplicação iniciada")
 
 # Carregar chave da API
 try:
     openai_key = st.secrets["OPENAI_API_KEY"]
+    logger.info("API key carregada do Streamlit secrets")
 except:
     load_dotenv()
     openai_key = os.getenv("OPENAI_API_KEY")
+    logger.info("API key carregada do .env")
 
 # Carrega todo o treinamento no modelo
 def carregar_instrucoes_sistema():
@@ -41,9 +40,11 @@ def carregar_instrucoes_sistema():
     try:
         caminho = os.path.join(os.path.dirname(__file__), 'system_instructions.txt')
         with open(caminho, 'r', encoding='utf-8') as file:
-            return file.read()
+            instrucoes = file.read()
+            logger.info(f"Instruções carregadas - {len(instrucoes)} caracteres")
+            return instrucoes
     except Exception as e:
-        logging.error(f"Erro ao carregar instruções do sistema: {e}")
+        logger.error(f"Erro ao carregar instruções: {e}")
         return "Você é uma assistente da equipe comercial da Opuspac. Responda de maneira breve e resumida."
 
 # Processa a pergunta do e a maneira como será a resposta do modelo
@@ -51,77 +52,96 @@ def retorna_resposta_modelo(mensagens, openai_key, modelo='gpt-4o-mini-2024-07-1
     openai.api_key = openai_key
     
     start_time = time.time()
-    logging.info(f"Processando mensagem com {len(mensagens)} entradas")
+    logger.info(f"Processando com modelo {modelo}")
     
-    if stream:
-        response_stream = openai.ChatCompletion.create(
-            model=modelo,
-            messages=mensagens,
-            temperature=temperatura,
-            max_tokens=max_tokens,
-            stream=True
-        )
-        
-        resposta_completa = ''
-        for chunk in response_stream:
-            if isinstance(chunk, dict) and 'choices' in chunk and len(chunk['choices']) > 0:
-                delta = chunk['choices'][0].get('delta', {})
-                resposta_completa += delta.get('content', '')
-                
-        elapsed_time = time.time() - start_time
-        processing_rate = f'Resposta processada com sucesso em {elapsed_time:.2f} segundos'
-        
-        with open("processing_rate.txt", "a") as txt_file:
-            txt_file.write(processing_rate + "\n")
+    try:
+        if stream:
+            response_stream = openai.ChatCompletion.create(
+                model=modelo,
+                messages=mensagens,
+                temperature=temperatura,
+                max_tokens=max_tokens,
+                stream=True
+            )
             
-        logging.info(processing_rate)
-        
-        return resposta_completa
-    else:
-        response = openai.ChatCompletion.create(
-            model=modelo,
-            messages=mensagens,
-            temperature=temperatura,
-            max_tokens=max_tokens
-        )
-        return response['choices'][0]['message']['content']
+            resposta_completa = ''
+            for chunk in response_stream:
+                if isinstance(chunk, dict) and 'choices' in chunk and len(chunk['choices']) > 0:
+                    delta = chunk['choices'][0].get('delta', {})
+                    resposta_completa += delta.get('content', '')
+                    
+            elapsed_time = time.time() - start_time
+            logger.info(f"Resposta processada em {elapsed_time:.2f}s")
+            
+            # Manter arquivo de performance existente
+            with open("processing_rate.txt", "a") as txt_file:
+                txt_file.write(f'Resposta processada em {elapsed_time:.2f} segundos\n')
+                
+            return resposta_completa
+        else:
+            response = openai.ChatCompletion.create(
+                model=modelo,
+                messages=mensagens,
+                temperature=temperatura,
+                max_tokens=max_tokens
+            )
+            elapsed_time = time.time() - start_time
+            logger.info(f"Resposta processada em {elapsed_time:.2f}s (não-stream)")
+            return response['choices'][0]['message']['content']
+            
+    except Exception as e:
+        logger.error(f"Erro na API: {e}")
+        return f"Erro ao processar: {str(e)}"
     
 # Carrega pastas com PDFs
-# OBS Optei por não seguir com arquivos PDFs, por isso não tem nenhum, um treinamento em txt é mais efetivo. Talvez sejam adicionados PDFs no futuro, mas no momento é apenas o treinamento em txt
 def carregar_pdfs(pasta):
     textos = {}
     try:
         if not os.path.exists(pasta):
-            print(f"A pasta '{pasta}' não foi encontrada")
+            logger.warning(f"Pasta '{pasta}' não encontrada")
             return textos
     
-        for arquivo in os.listdir(pasta):
-            if arquivo.endswith('.pdf'):
+        arquivos_pdf = [f for f in os.listdir(pasta) if f.endswith('.pdf')]
+        logger.info(f"Encontrados {len(arquivos_pdf)} PDFs")
+        
+        for arquivo in arquivos_pdf:
+            try:
                 caminho = os.path.join(pasta, arquivo)
-                print(f'Lendo o arquivo: {caminho}')
+                logger.info(f'Carregando PDF: {arquivo}')
                 documento = fitz.open(caminho)
                 texto = ""
                 for pagina in documento:
                     texto += pagina.get_text()
                 textos[arquivo] = texto
-            else:
-                print(f'Ignorando o arquivo não-PDF: {arquivo}')
+                logger.info(f'PDF {arquivo} carregado - {len(texto)} caracteres')
+            except Exception as e:
+                logger.error(f'Erro ao carregar {arquivo}: {e}')
+                
     except Exception as e:
-        print(f'Ocorreu um erro ao carregar os PDFs: {e}')
+        logger.error(f'Erro ao carregar PDFs: {e}')
+    
     return textos
 
 # Busca respostas nos PDFs
 def buscar_resposta(textos, pergunta):
+    logger.info(f"Buscando: '{pergunta[:50]}...'")
     respostas_encontradas = []
     for arquivo, texto in textos.items():
         if pergunta.lower() in texto.lower():
             respostas_encontradas.append(f"Resposta encontrada no arquivo {arquivo}: {texto[:100]}...")
-    return respostas_encontradas if respostas_encontradas else ["Nenhuma resposta encontrada."]
+            logger.info(f"Resposta encontrada em {arquivo}")
+    
+    if not respostas_encontradas:
+        logger.info("Nenhuma resposta encontrada nos PDFs")
+        return ["Nenhuma resposta encontrada."]
+    
+    return respostas_encontradas
 
 # Responsavél por toda parte de comunicação/respostas ETC
 def inicializacao():
     if not 'mensagens' in st.session_state:
         st.session_state['mensagens'] = []
+        logger.info("Sessão inicializada")
         
 def exibe_mensagem_assistente(conteudo):
     col1, col2 = st.columns([1, 9])
@@ -162,32 +182,52 @@ def pagina_principal():
     prompt = st.chat_input('Faça uma pergunta...')
     
     if prompt:
-        idioma = detect(prompt)
+        logger.info(f"Nova pergunta: '{prompt[:50]}...'")
+        
+        try:
+            idioma = detect(prompt)
+            logger.info(f"Idioma detectado: {idioma}")
+        except:
+            idioma = 'desconhecido'
+            logger.warning("Erro na detecção de idioma")
+        
         nova_mensagem = {'role': 'user', 'content': prompt}
         exibe_mensagem_usuario(nova_mensagem['content'])
         mensagens.append(nova_mensagem)
         
-        respostas = buscar_resposta(textos_pdf, prompt)
-        
-        mensagens_para_modelo = mensagens.copy()
-        
-        instrucoes_sistema = carregar_instrucoes_sistema()
-        
-        mensagens_para_modelo.append({'role': 'system', 'content': instrucoes_sistema})
-        
-        resposta_completa = retorna_resposta_modelo(mensagens_para_modelo, openai_key, stream=True, max_tokens=900)
-        
-        exibe_mensagem_assistente(resposta_completa)
-        
-        nova_mensagem = {'role': 'assistant', 'content': resposta_completa}
-        mensagens.append(nova_mensagem)
+        try:
+            respostas = buscar_resposta(textos_pdf, prompt)
+            
+            mensagens_para_modelo = mensagens.copy()
+            instrucoes_sistema = carregar_instrucoes_sistema()
+            mensagens_para_modelo.append({'role': 'system', 'content': instrucoes_sistema})
+            
+            resposta_completa = retorna_resposta_modelo(mensagens_para_modelo, openai_key, stream=True, max_tokens=900)
+            
+            exibe_mensagem_assistente(resposta_completa)
+            
+            nova_mensagem = {'role': 'assistant', 'content': resposta_completa}
+            mensagens.append(nova_mensagem)
+            
+            logger.info("Interação concluída com sucesso")
+            
+        except Exception as e:
+            logger.error(f"Erro na interação: {e}")
+            erro_msg = f"Erro: {str(e)}"
+            exibe_mensagem_assistente(erro_msg)
+            mensagens.append({'role': 'assistant', 'content': erro_msg})
         
         st.session_state['mensagens'] = mensagens
         
 # Roda efetivamente o modelo
 def main():
-    inicializacao()
-    pagina_principal()
+    try:
+        logger.info("=== INÍCIO DA SESSÃO ===")
+        inicializacao()
+        pagina_principal()
+    except Exception as e:
+        logger.error(f"Erro crítico: {e}")
+        st.error(f"Erro na aplicação: {str(e)}")
 
 if __name__ == '__main__':
     main()

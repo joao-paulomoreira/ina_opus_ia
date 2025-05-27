@@ -11,3 +11,4 @@ pymupdf
 python-dotenv
 fastapi
 uvicorn
+simple_logger
