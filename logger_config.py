@@ -2,6 +2,7 @@ import logging
 import os
 from datetime import datetime
 
+##Configura sistema para a geração e controle de logs
 def setup_logger():
     """Configura um sistema para gerar logs"""
     
